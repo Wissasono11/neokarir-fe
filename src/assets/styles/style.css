@@ -1,0 +1,52 @@
+@import "tailwindcss";
+
+@theme {
+  --font-jakarta: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-sans: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+
+  --color-primary: #4F46E5;
+  --color-secondary-text: #64748B;
+  --color-border: #E2E8F0;
+  --color-secondary: #F6F8FF;
+  --color-background: #FFFFFF;
+  --color-bg-secondary: #EEF2FF;
+  --color-primary-text: #081021;
+  --color-primary-light: #EEF2FF;
+  --color-white: #FFFFFF;
+  
+  --color-canvas-white: #F9FAFB;
+  --color-pure-surface: #FFFFFF;
+  --color-charcoal-ink: #18181B;
+  --color-muted-steel: #71717A;
+  --color-whisper-border: rgba(226,232,240,0.5);
+
+  --color-strength-weak: #EF4444;
+  --color-strength-medium: #F59E0B;
+  --color-strength-strong: #22C55E;
+  --color-error: #EF4444;
+  --color-error-light: #FEF2F2;
+  
+  --animate-accordion-down: accordion-down 0.2s ease-out;
+  --animate-accordion-up: accordion-up 0.2s ease-out;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px;
+}
+
+body {
+  font-family: var(--font-jakarta);
+  background-color: var(--color-background);
+  color: var(--color-primary-text);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.spring-transition {
+  transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.15);
+}
+
+.btn-tactile:active {
+  transform: translateY(1px);
+}
