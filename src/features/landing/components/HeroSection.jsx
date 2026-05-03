@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom'
 import Button from '../../../components/ui/Button';
 import { heroTextContainerVariants as textContainerVariants, heroTextItemVariants as textItemVariants, heroImageVariants as imageVariants } from '../../../animations/variants';
 
@@ -29,9 +30,9 @@ const HeroSection = () => {
           </motion.p>
 
           <motion.div variants={textItemVariants} className="flex flex-col sm:flex-row items-start sm:items-center gap-6 mb-12">
-            <Button variant="primary" className="text-lg px-8 py-4 shadow-sm hover:shadow-md transition-shadow">
+            <Link to="/register" className="bg-primary text-white hover:bg-primary/90 text-lg px-8 py-4 shadow-sm hover:shadow-md transition-shadow font-semibold rounded-xl transition-all duration-300 spring-transition btn-tactile">
               Get Started
-            </Button>
+            </Link>
           </motion.div>
 
           {/* Social Proof */}

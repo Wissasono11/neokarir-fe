@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom'
 import { Sparkles, ArrowRight, ScanFace, CheckCircle2 } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { ctaContainerVariants, floatAnimation, floatAnimationDelayed } from '../../../animations/variants';
@@ -51,17 +52,14 @@ const CTASection = () => {
             >
               <input 
                 type="email" 
-                placeholder="Enter your work email..." 
+                placeholder="Enter your email..." 
                 className="flex-1 bg-transparent border-none outline-none px-4 py-3 text-white placeholder:text-gray-300/80 text-lg focus:ring-0"
                 required
               />
-              <button 
-                type="submit" 
-                className="bg-white text-[#5B21B6] hover:bg-gray-50 font-bold px-8 py-4 rounded-xl flex items-center justify-center gap-2 transition-all duration-300 shadow-[0_0_20px_rgba(255,255,255,0.25)] hover:shadow-[0_0_30px_rgba(255,255,255,0.4)] hover:-translate-y-0.5 shrink-0"
-              >
+              <Link to="/register" className="bg-white text-[#5B21B6] hover:bg-gray-50 font-bold px-8 py-4 rounded-xl flex items-center justify-center gap-2 transition-all duration-300 shadow-[0_0_20px_rgba(255,255,255,0.25)] hover:shadow-[0_0_30px_rgba(255,255,255,0.4)] hover:-translate-y-0.5 shrink-0">
                 Analyze My Profile
                 <ArrowRight className="w-5 h-5" />
-              </button>
+              </Link>
             </form>
             
             <p className="text-purple-200/60 text-sm mt-6 flex items-center gap-2">

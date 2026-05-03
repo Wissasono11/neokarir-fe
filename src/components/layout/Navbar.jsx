@@ -5,7 +5,6 @@ import Button from '../ui/Button';
 import { navbarVariants } from '../../animations/variants';
 import { useScrollDetection } from '../../hooks/useScrollDetection';
 import { useMobileMenu } from '../../hooks/useMobileMenu';
-import logo from '../../assets/images/logo.png';
 
 const Navbar = () => {
   const scrolled = useScrollDetection(20);
