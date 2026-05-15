@@ -13,22 +13,22 @@ const QuickLinks = () => {
   ];
 
   return (
-    <div className="bg-white rounded-[32px] border border-border p-6 shadow-sm h-full flex flex-col">
-      <h3 className="text-[17px] font-bold text-primary-text mb-6">Quick Links</h3>
+    <div className="bg-white rounded-[32px] border border-border p-5 md:p-6 shadow-sm h-full flex flex-col">
+      <h3 className="text-sm md:text-[17px] font-bold text-primary-text mb-5 md:mb-6">Quick Links</h3>
       
-      <div className="flex-1 grid grid-cols-2 gap-3">
+      <div className="flex-1 grid grid-cols-1 lg:grid-cols-2 gap-3">
         {links.map((link) => {
           const Icon = link.icon;
           return (
             <Link 
               key={link.id} 
               to={link.path}
-              className="flex items-center gap-3 p-3 rounded-xl border border-border hover:border-primary/40 hover:bg-bg-secondary/30 transition-all group"
+              className="flex items-center gap-2.5 md:gap-3 p-3 rounded-2xl border border-border hover:border-primary/40 hover:bg-bg-secondary/30 transition-all group min-w-0"
             >
-              <div className={`w-10 h-10 rounded-lg flex items-center justify-center shrink-0 ${link.bg}`}>
-                <Icon size={20} className={link.color} />
+              <div className={`w-9 h-9 md:w-10 md:h-10 rounded-xl flex items-center justify-center shrink-0 ${link.bg}`}>
+                <Icon size={18} className={link.color} />
               </div>
-              <span className="text-[13px] font-semibold text-secondary-text group-hover:text-primary-text leading-tight">
+              <span className="text-[11px] md:text-[13px] font-semibold text-secondary-text group-hover:text-primary-text leading-tight truncate">
                 {link.label}
               </span>
             </Link>

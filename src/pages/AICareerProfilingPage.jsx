@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Sparkles } from 'lucide-react';
+import { BrainCircuit } from 'lucide-react';
 import { useAIProfiling } from '../features/ai-profiling/hooks/useAIProfiling';
 import { profilingLoadingVariants, staggerContainerVariants } from '../utils/animations';
 import ProfilingHero from '../features/ai-profiling/components/ProfilingHero';
@@ -50,7 +50,7 @@ const AICareerProfilingPage = () => {
                 strokeLinecap="round"
               />
             </svg>
-            <Sparkles size={48} className="text-accent-purple" />
+            <BrainCircuit size={48} className="text-accent-purple animate-pulse" />
           </motion.div>
           
           <h2 className="text-2xl font-bold text-primary-text mb-3">{processingStatus}</h2>
