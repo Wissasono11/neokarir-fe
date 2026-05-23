@@ -4,7 +4,6 @@ import logo from '../../../assets/images/logo.png';
 import {
   Target,
   Award,
-  BriefcaseBusiness,
   FileText,
   MessageSquareMore ,
   Settings,
@@ -18,7 +17,6 @@ const SIDEBAR_ITEMS = [
   { id: 'overview', label: 'My Overview', icon: 'si:dashboard-customize-duotone', path: '/dashboard' },
   { id: 'skill-gap', label: 'Skill Gap Analysis', icon: Target, path: '/dashboard/skill-gap' },
   { id: 'recommendation', label: 'Career Recommendation', icon: Award, path: '/dashboard/recommendations' },
-  { id: 'jobs-match', label: 'Jobs Match Score', icon: BriefcaseBusiness, path: '/dashboard/jobs-match' },
   { id: 'cv-analyzer', label: 'CV Analyzer', icon: FileText, path: '/dashboard/cv-analyzer' },
   { id: 'jobs-market', label: 'Jobs Market', icon: "mingcute:presentation-1-line", path: '/dashboard/jobs-market' },
   { id: 'ai-assistant', label: 'AI Assistant', icon: MessageSquareMore, path: '/dashboard/ai-assistant' },

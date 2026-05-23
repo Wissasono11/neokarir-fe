@@ -1,5 +1,3 @@
-import React from 'react';
-import { useAuth } from '../contexts/AuthContext';
 import DashboardLayout from '../layouts/DashboardLayout';
 import StatCard from '../features/dashboard/components/StatCard';
 import CurrentFocusCard from '../features/dashboard/components/CurrentFocusCard';
@@ -8,12 +6,18 @@ import RadarChartComp from '../features/dashboard/components/RadarChartComp';
 import CareerRecommendationList from '../features/dashboard/components/CareerRecommendationList';
 import QuickTipsCard from '../features/dashboard/components/QuickTipsCard';
 import QuickLinks from '../features/dashboard/components/QuickLinks';
-import { useAIProfiling } from '../features/ai-profiling/hooks/useAIProfiling';
+import { useDashboardData } from '../features/dashboard/hooks/useDashboardData';
 import avatar from '../assets/images/avatar.png';
 
 const DashboardPage = () => { 
-  const { user } = useAuth();
-  const { results } = useAIProfiling(); // Reusing mock data for now
+  const {
+    user,
+    results,
+    overallReadiness,
+    topRecommendations,
+    compatibilityScore,
+    dynamicTips
+  } = useDashboardData();
 
   return (
     <DashboardLayout>
@@ -40,15 +44,15 @@ const DashboardPage = () => {
         </StatCard>
 
         {/* Current Focus Card */}
-        <CurrentFocusCard targetRole={user?.role || 'Full Stack Developer'} compatibilityScore={67} />
+        <CurrentFocusCard targetRole={user?.role || 'Full Stack Developer'} compatibilityScore={compatibilityScore} />
 
         {/* Detailed Progress Card */}
         <DetailedProgressCard progressData={{
-          overallReadiness: results.overallScore || 81,
+          overallReadiness: overallReadiness || results.overallScore || 81,
           categories: [
             { label: 'Profil Lengkap', value: 90, color: 'bg-emerald-500' },
-            { label: 'Skill Match', value: 75, color: 'bg-indigo-600' },
-            { label: 'Roadmap Progress', value: 50, color: 'bg-amber-500' },
+            { label: 'Skill Match', value: compatibilityScore, color: 'bg-indigo-600' },
+            { label: 'Roadmap Progress', value: overallReadiness, color: 'bg-amber-500' },
           ]
         }} />
       </div>
@@ -58,17 +62,17 @@ const DashboardPage = () => {
       {/* Middle Grid */}
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-4 md:gap-6 mb-6">
         <div className="lg:col-span-5 h-[300px] md:h-[440px]">
-          <RadarChartComp data={results.skillGap} overallScore={results.overallScore} />
+          <RadarChartComp data={results.skillGap} overallScore={overallReadiness || results.overallScore} />
         </div>
         <div className="lg:col-span-7">
-          <CareerRecommendationList recommendations={results.topCareers} />
+          <CareerRecommendationList recommendations={topRecommendations} />
         </div>
       </div>
 
       {/* Bottom Grid */}
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-4 md:gap-6 pb-10">
         <div className="lg:col-span-6">
-          <QuickTipsCard />
+          <QuickTipsCard tips={dynamicTips} />
         </div>
         <div className="lg:col-span-6">
           <QuickLinks />
