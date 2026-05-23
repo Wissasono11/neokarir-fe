@@ -81,7 +81,7 @@ const CVScoreOverview = ({ score, summary }) => {
             </div>
           </div>
 
-          <p className="text-[15px] font-medium text-secondary-text leading-relaxed">
+          <p className="text-body font-medium text-secondary-text leading-relaxed">
             {summary}
           </p>
         </div>

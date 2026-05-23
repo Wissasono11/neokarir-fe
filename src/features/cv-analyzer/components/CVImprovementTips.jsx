@@ -60,7 +60,7 @@ const CVImprovementTips = ({ tips = [] }) => {
 
               {/* Priority badge */}
               <div className="flex items-center shrink-0 self-start sm:self-center gap-2">
-                <span className={`inline-flex px-3 py-1 rounded-full text-[10px] font-extrabold border uppercase tracking-wider ${cfg.badgeClass}`}>
+                <span className={`inline-flex px-3 py-1 rounded-full text-2xs font-extrabold border uppercase tracking-wider ${cfg.badgeClass}`}>
                   {cfg.label}
                 </span>
               </div>

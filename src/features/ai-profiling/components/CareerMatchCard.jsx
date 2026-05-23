@@ -1,6 +1,5 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { MapPin, Banknote } from 'lucide-react';
 import { profilingResultVariants } from '../../../utils/animations';
 
 const CareerMatchCard = ({ career }) => {
@@ -23,8 +22,6 @@ const CareerMatchCard = ({ career }) => {
             </h3>
             <div className="flex items-center gap-2 text-sm text-secondary-text mt-1">
               <span className="font-medium text-primary-text">{career.company}</span>
-              <span>&bull;</span>
-              <span className="flex items-center gap-1"><MapPin size={14} /> {career.location}</span>
             </div>
           </div>
         </div>
@@ -33,16 +30,20 @@ const CareerMatchCard = ({ career }) => {
           <div className="w-12 h-12 rounded-full flex items-center justify-center bg-accent-purple-light text-accent-purple font-bold border-4 border-white shadow-sm ring-1 ring-border/50">
             {career.matchScore}%
           </div>
-          <span className="text-[10px] font-semibold text-secondary-text uppercase tracking-wider mt-1">Match</span>
+          <span className="text-2xs font-semibold text-secondary-text uppercase tracking-wider mt-1">Match</span>
         </div>
       </div>
       
-      <div className="flex items-center gap-3 text-sm font-medium">
-        <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-emerald-50 text-emerald-700">
-          <Banknote size={14} />
-          {career.salary}
-        </span>
-      </div>
+      {/* Required Skills list */}
+      {career.requiredSkills && career.requiredSkills.length > 0 && (
+        <div className="flex flex-wrap gap-1.5 mt-3 pt-3 border-t border-border/40">
+          {career.requiredSkills.map((skill, idx) => (
+            <span key={idx} className="px-2 py-0.5 rounded bg-bg-secondary text-primary font-bold text-2xs uppercase tracking-wider">
+              {skill}
+            </span>
+          ))}
+        </div>
+      )}
     </motion.div>
   );
 };

@@ -30,7 +30,7 @@ const CVUploadZone = ({ cvFile, setCvFile }) => {
             <UploadCloud size={32} />
           </div>
           
-          <h3 className="text-[22px] font-bold text-primary-text mb-2">
+          <h3 className="text-title font-bold text-primary-text mb-2">
             Drag & Drop your CV here
           </h3>
           <p className="text-secondary-text mb-8">

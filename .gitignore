@@ -25,3 +25,4 @@ dist-ssr
 
 # directories (not to use)
 planning
+*.AGENT.md

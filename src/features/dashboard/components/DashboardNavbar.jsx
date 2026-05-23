@@ -20,13 +20,13 @@ const DashboardNavbar = ({ onMenuClick }) => {
             </button>
             
             {/* Title */}
-            <h1 className="text-xl md:text-2xl font-bold text-primary-text tracking-tight">Dashboard</h1>
+            <h1 className="text-subtitle md:text-title font-bold text-primary-text tracking-tight">Dashboard</h1>
           </div>
 
           <div className="flex items-center gap-3 md:gap-4">
             <div className="text-right hidden sm:block">
-              <p className="text-sm font-medium text-secondary-text leading-tight">Hello👋</p>
-              <p className="text-[15px] font-bold text-primary-text leading-tight mt-0.5">{user?.name || 'Franz Hermann'}</p>
+              <p className="text-body-sm font-medium text-secondary-text leading-tight">Hello👋</p>
+              <p className="text-body-sm font-bold text-primary-text leading-tight mt-0.5">{user?.name || 'Franz Hermann'}</p>
             </div>
             <div className="w-10 h-10 rounded-full overflow-hidden bg-yellow-400 border-white shadow-sm cursor-pointer shrink-0">
               <img

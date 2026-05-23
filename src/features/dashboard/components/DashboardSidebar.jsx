@@ -70,7 +70,7 @@ const DashboardSidebar = ({ isOpen, onClose }) => {
               />
             </div>
             {(!isCollapsed || (isOpen && window.innerWidth < 1024)) && (
-              <span className="text-xl font-bold text-primary-text tracking-tight truncate">
+              <span className="text-subtitle font-bold text-primary-text tracking-tight truncate">
                 NeoKarir
               </span>
             )}
@@ -116,7 +116,7 @@ const DashboardSidebar = ({ isOpen, onClose }) => {
                 )}
 
                 {(!isCollapsed || (isOpen && window.innerWidth < 1024)) && (
-                  <span className="text-sm truncate">{item.label}</span>
+                  <span className="text-body-sm truncate">{item.label}</span>
                 )}
               </Link>
             );
@@ -138,7 +138,7 @@ const DashboardSidebar = ({ isOpen, onClose }) => {
                 `}
               >
                 <Icon size={20} />
-                {(!isCollapsed || (isOpen && window.innerWidth < 1024)) && <span className="text-sm truncate">{item.label}</span>}
+                {(!isCollapsed || (isOpen && window.innerWidth < 1024)) && <span className="text-body-sm truncate">{item.label}</span>}
               </Link>
             );
           })}

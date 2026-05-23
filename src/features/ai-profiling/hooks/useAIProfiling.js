@@ -36,28 +36,25 @@ export const useAIProfiling = () => {
         id: 1,
         title: 'Junior Frontend Developer',
         company: 'Gojek',
-        location: 'Jakarta',
-        salary: 'Rp 5-11 jt/bulan',
         matchScore: 92,
-        icon: 'https://logo.clearbit.com/gojek.com'
+        icon: 'https://logo.clearbit.com/gojek.com',
+        requiredSkills: ['React', 'CSS/Tailwind', 'JavaScript', 'Problem Solving']
       },
       {
         id: 2,
         title: 'IT Support',
         company: 'Kopi Kenangan',
-        location: 'Bandung',
-        salary: 'Rp 5-8 jt/bulan',
         matchScore: 87,
-        icon: 'https://logo.clearbit.com/kopikenangan.com'
+        icon: 'https://logo.clearbit.com/kopikenangan.com',
+        requiredSkills: ['Troubleshooting', 'Networking', 'Linux', 'Communication']
       },
       {
         id: 3,
         title: 'Junior Backend Developer',
         company: 'Shopee',
-        location: 'Remote',
-        salary: 'Rp 8-12 jt/bulan',
         matchScore: 91,
-        icon: 'https://logo.clearbit.com/shopee.co.id'
+        icon: 'https://logo.clearbit.com/shopee.co.id',
+        requiredSkills: ['Golang', 'Docker', 'SQL', 'Git']
       }
     ],
     skillGap: [

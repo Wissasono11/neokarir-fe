@@ -39,7 +39,7 @@ const StepSummary = ({
       className="flex flex-col items-center w-full"
     >
       <div className="text-center mb-10">
-        <h1 className="text-[32px] md:text-[40px] font-bold text-primary-text tracking-tight mb-4">
+        <h1 className="text-heading-lg md:text-heading-xl font-bold text-primary-text tracking-tight mb-4">
           Review & Confirm Your Profile
         </h1>
         <p className="text-secondary-text text-lg max-w-2xl mx-auto">
@@ -185,7 +185,7 @@ const StepSummary = ({
             <Button 
               onClick={submitOnboarding}
               disabled={isSubmitting}
-              className="w-full bg-white/10! hover:bg-white/20! backdrop-blur-lg border border-white/30 text-white! py-4 text-[16px] shadow-xl transition-all cursor-pointer"
+              className="w-full bg-white/10! hover:bg-white/20! backdrop-blur-lg border border-white/30 text-white! py-4 text-body shadow-xl transition-all cursor-pointer"
             >
               {isSubmitting ? 'Analyzing...' : 'Analyze My Profile 🚀'}
             </Button>

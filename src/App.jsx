@@ -13,6 +13,7 @@ import OnboardingPage from './pages/OnboardingPage';
 import AICareerProfilingPage from './pages/AICareerProfilingPage';
 import DashboardPage from './pages/DashboardPage';
 import CVAnalyzerPage from './pages/CVAnalyzerPage';
+import SkillGapPage from './pages/SkillGapPage';
 
 function App() {
   return (
@@ -34,8 +35,9 @@ function App() {
           <Route element={<ProtectedRoute />}>
             <Route path="/dashboard" element={<DashboardPage />} />
             <Route path="/dashboard/cv-analyzer" element={<CVAnalyzerPage />} />
+            <Route path="/dashboard/skill-gap" element={<SkillGapPage />} />
           </Route>
-        </Routes>
+        </Routes> 
       </BrowserRouter>
     </AuthProvider>
   );

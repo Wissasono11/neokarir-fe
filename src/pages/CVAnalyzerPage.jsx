@@ -40,7 +40,7 @@ const CVAnalyzerPage = () => {
       {status !== 'done' && (
         <div className="flex items-center gap-3.5 mb-8">  
           <div>
-            <h1 className="text-2xl md:text-[28px] font-bold text-primary-text mb-1 tracking-tight">
+            <h1 className="text-2xl md:text-heading font-bold text-primary-text mb-1 tracking-tight">
               CV Analyzer
             </h1>
             <p className="text-sm font-semibold text-secondary-text">

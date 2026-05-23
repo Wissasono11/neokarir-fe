@@ -112,7 +112,7 @@ const RegisterForm = () => {
         <Button 
           type="submit" 
           variant="primary" 
-          className="w-full py-3.5 text-[15px]"
+          className="w-full py-3.5 text-body"
           disabled={isSubmitting}
         >
           {isSubmitting ? 'Creating account...' : 'Create Account'}

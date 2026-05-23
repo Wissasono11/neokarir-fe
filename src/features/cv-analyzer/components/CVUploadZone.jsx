@@ -46,7 +46,7 @@ const CVUploadZone = ({ onFileSelected, error }) => {
         <h3 className="text-lg md:text-xl font-bold text-primary-text mb-2">
           Drag & Drop Your CV Here
         </h3>
-        <p className="text-sm md:text-[15px] font-medium text-secondary-text mb-6">
+        <p className="text-sm md:text-body font-medium text-secondary-text mb-6">
           or <span className="text-primary hover:underline font-bold">click to browse files</span>
         </p>
 

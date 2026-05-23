@@ -34,13 +34,13 @@ const CVExtractedEntities = ({ entities }) => {
                     <div className={`p-2 rounded-xl bg-white shrink-0 shadow-sm ${sec.iconColor}`}>
                       <Icon className="w-5 h-5" />
                     </div>
-                    <h4 className="text-[15px] font-bold text-primary-text">
+                    <h4 className="text-body-sm font-bold text-primary-text">
                       {sec.title}
                     </h4>
                   </div>
 
                   {/* NER tag badge */}
-                  <span className="text-[10px] font-extrabold text-secondary-text bg-border/60 px-2 py-0.5 rounded-md uppercase">
+                  <span className="text-2xs font-extrabold text-secondary-text bg-border/60 px-2 py-0.5 rounded-md uppercase">
                     NER: {sec.tag}
                   </span>
                 </div>

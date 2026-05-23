@@ -76,7 +76,7 @@ const HeroSection = () => {
             </div>
             <div className="pr-1 md:pr-2">
               <div className="text-xs md:text-sm font-bold text-primary-text">Data Scientist</div>
-              <div className="text-[10px] md:text-xs font-medium text-secondary-text mt-0.5">Role Match Score</div>
+              <div className="text-2xs md:text-xs font-medium text-secondary-text mt-0.5">Role Match Score</div>
             </div>
           </div>
 
@@ -95,7 +95,7 @@ const HeroSection = () => {
 
             <div className="space-y-3 md:space-y-4">
               <div>
-                <div className="flex justify-between text-[10px] md:text-xs font-semibold mb-1.5 md:mb-2">
+                <div className="flex justify-between text-2xs md:text-xs font-semibold mb-1.5 md:mb-2">
                   <span className="text-secondary-text">Python</span>
                   <span className="text-primary-text">Expert</span>
                 </div>
@@ -104,7 +104,7 @@ const HeroSection = () => {
                 </div>
               </div>
               <div>
-                <div className="flex justify-between text-[10px] md:text-xs font-semibold mb-1.5 md:mb-2">
+                <div className="flex justify-between text-2xs md:text-xs font-semibold mb-1.5 md:mb-2">
                   <span className="text-secondary-text">Machine Learning</span>
                   <span className="text-primary-text">Advanced</span>
                 </div>
