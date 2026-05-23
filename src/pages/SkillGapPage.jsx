@@ -53,7 +53,7 @@ const SkillGapPage = () => {
               <h1 className="text-2xl md:text-heading font-bold text-primary-text mb-1 tracking-tight">
                 Skill Gap Analysis
               </h1>
-              <p className="text-sm font-semibold text-secondary-text">
+              <p className="text-body-sm font-medium text-secondary-text">
                 Bandingkan skill kamu dengan kebutuhan industri
               </p>
             </div>

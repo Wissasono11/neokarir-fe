@@ -1,14 +1,20 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import { 
   Radar, RadarChart, PolarGrid, PolarAngleAxis, PolarRadiusAxis, ResponsiveContainer 
 } from 'recharts';
 
 const RadarChartComp = ({ data, overallScore }) => {
+  const navigate = useNavigate();
+
   return (
     <div className="bg-white rounded-3xl border border-border p-4 md:p-8 shadow-sm h-full flex flex-col">
       <div className="flex justify-between items-center mb-1">
         <h3 className="text-body md:text-subtitle font-bold text-primary-text">Skill Gap Analysis</h3>
-        <button className="text-xs md:text-sm font-bold text-primary hover:text-primary/80 transition-colors">
+        <button 
+          onClick={() => navigate('/dashboard/skill-gap')}
+          className="text-xs md:text-sm font-bold text-primary hover:text-primary/80 transition-colors"
+        >
           View Details
         </button>
       </div>
@@ -29,6 +35,7 @@ const RadarChartComp = ({ data, overallScore }) => {
               strokeWidth={2}
               fill="#4F46E5" 
               fillOpacity={0.15} 
+              isAnimationActive={false}
             />
           </RadarChart>
         </ResponsiveContainer>

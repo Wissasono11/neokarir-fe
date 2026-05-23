@@ -1,8 +1,9 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { ArrowLeft, FileText } from 'lucide-react';
 import DashboardLayout from '../layouts/DashboardLayout';
 import Breadcrumb from '../components/ui/Breadcrumb';
+import LoadingSpinner from '../components/ui/LoadingSpinner';
 import CVUploadZone from '../features/cv-analyzer/components/CVUploadZone';
 import CVFeatureCards from '../features/cv-analyzer/components/CVFeatureCards';
 import CVProcessing from '../features/cv-analyzer/components/CVProcessing';
@@ -11,6 +12,15 @@ import { useCVAnalyzer } from '../features/cv-analyzer/hooks/useCVAnalyzer';
 
 const CVAnalyzerPage = () => {
   const navigate = useNavigate();
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 600);
+    return () => clearTimeout(timer);
+  }, []);
+
   const { 
     file, 
     status, 
@@ -30,6 +40,19 @@ const CVAnalyzerPage = () => {
     breadcrumbItems.push({ label: 'Hasil Analisis' });
   }
 
+  if (isLoading) {
+    return (
+      <DashboardLayout>
+        <div className="mb-6">
+          <Breadcrumb items={breadcrumbItems} />
+        </div>
+        <div className="flex items-center justify-center h-96">
+          <LoadingSpinner size="lg" label="Mempersiapkan CV Analyzer..." />
+        </div>
+      </DashboardLayout>
+    );
+  }
+
   return (
     <DashboardLayout>
       <div className="mb-6">
@@ -43,7 +66,7 @@ const CVAnalyzerPage = () => {
             <h1 className="text-2xl md:text-heading font-bold text-primary-text mb-1 tracking-tight">
               CV Analyzer
             </h1>
-            <p className="text-sm font-semibold text-secondary-text">
+            <p className="text-body-sm font-medium text-secondary-text">
               Unggah berkas CV Anda untuk dianalisis oleh teknologi cerdas kecerdasan buatan
             </p>
           </div>

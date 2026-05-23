@@ -44,7 +44,7 @@ const QuickTipsCard = ({ tips }) => {
           <div className="w-9 h-9 rounded-xl bg-white/20 backdrop-blur-sm flex items-center justify-center">
             <Lightbulb size={18} className="text-white" />
           </div>
-          <h3 className="text-subtitle font-bold text-white">Quick Tips & Action Steps</h3>
+          <h3 className="text-body-lg font-bold text-white">Quick Tips & Action Steps</h3>
         </div>
         
         <div className="flex flex-col gap-3 relative z-10">

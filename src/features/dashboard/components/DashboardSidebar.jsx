@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import logo from '../../../assets/images/logo.png';
 import {
@@ -27,8 +27,7 @@ const BOTTOM_ITEMS = [
   { id: 'support', label: 'Support', icon: HelpCircle, path: '/support' },
 ];
 
-const DashboardSidebar = ({ isOpen, onClose }) => {
-  const [isCollapsed, setIsCollapsed] = useState(false);
+const DashboardSidebar = ({ isOpen, onClose, isCollapsed, onToggleCollapse }) => {
   const location = useLocation();
 
   return (
@@ -50,7 +49,7 @@ const DashboardSidebar = ({ isOpen, onClose }) => {
       >
         {/* Toggle Button (Desktop) */}
         <button
-          onClick={() => setIsCollapsed(!isCollapsed)}
+          onClick={onToggleCollapse}
           className="hidden lg:flex absolute -right-4 top-[24px] w-8 h-8 rounded-full border border-border/60 bg-white items-center justify-center text-secondary-text hover:text-primary transition-colors z-20 shadow-sm"
         >
           {isCollapsed ? <ChevronRight size={16} /> : <ChevronLeft size={16} />}

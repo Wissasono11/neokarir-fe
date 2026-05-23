@@ -1,15 +1,19 @@
-import React, { useState } from 'react';
+import React from 'react';
 import DashboardSidebar from '../features/dashboard/components/DashboardSidebar';
 import DashboardNavbar from '../features/dashboard/components/DashboardNavbar';
+import { useSidebar } from '../features/dashboard/hooks/useSidebar';
 
 const DashboardLayout = ({ children }) => {
-  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
-
-  const toggleSidebar = () => setIsSidebarOpen(!isSidebarOpen);
+  const { isOpen, isCollapsed, toggleSidebar, closeSidebar, toggleCollapse } = useSidebar();
 
   return (
     <div className="flex h-screen bg-[#F8FAFC] overflow-hidden">
-      <DashboardSidebar isOpen={isSidebarOpen} onClose={() => setIsSidebarOpen(false)} />
+      <DashboardSidebar 
+        isOpen={isOpen} 
+        onClose={closeSidebar} 
+        isCollapsed={isCollapsed} 
+        onToggleCollapse={toggleCollapse} 
+      />
 
       {/* Main Content Area */}
       <main className="flex-1 flex flex-col h-screen overflow-hidden">

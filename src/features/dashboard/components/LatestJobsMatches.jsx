@@ -3,7 +3,6 @@ import React from 'react';
 const LatestJobsMatches = ({ matches }) => {
   return (
     <div className="bg-dashboard-background rounded-[32px] p-6 shadow-lg h-full flex flex-col relative overflow-hidden">
-      {/* Decorative blur elements */}
       <div className="absolute top-0 right-0 w-48 h-48 bg-white/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/4 pointer-events-none" />
       <div className="absolute bottom-0 left-0 w-32 h-32 bg-white/10 rounded-full blur-2xl translate-y-1/2 -translate-x-1/4 pointer-events-none" />
       

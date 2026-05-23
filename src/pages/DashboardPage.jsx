@@ -16,7 +16,8 @@ const DashboardPage = () => {
     overallReadiness,
     topRecommendations,
     compatibilityScore,
-    dynamicTips
+    dynamicTips,
+    radarData
   } = useDashboardData();
 
   return (
@@ -25,7 +26,7 @@ const DashboardPage = () => {
         <h2 className="text-title md:text-heading font-bold text-primary-text mb-1">
           Good Morning {user?.name?.split(' ')[0] || 'Franz'}!
         </h2>
-        <p className="text-caption md:text-body-sm font-medium text-secondary-text">
+        <p className="text-body-sm md:text-body-md font-medium text-secondary-text">
           Berikut adalah progres karir dan kesiapan industri kamu hari ini.
         </p>
       </div>
@@ -62,7 +63,7 @@ const DashboardPage = () => {
       {/* Middle Grid */}
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-4 md:gap-6 mb-6">
         <div className="lg:col-span-5 h-[300px] md:h-[440px]">
-          <RadarChartComp data={results.skillGap} overallScore={overallReadiness || results.overallScore} />
+          <RadarChartComp data={radarData} overallScore={overallReadiness || results.overallScore} />
         </div>
         <div className="lg:col-span-7">
           <CareerRecommendationList recommendations={topRecommendations} />

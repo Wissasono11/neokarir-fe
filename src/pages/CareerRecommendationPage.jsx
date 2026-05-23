@@ -67,10 +67,10 @@ const CareerRecommendationPage = () => {
           {/* Header and Stats */}
           <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
             <div>
-              <h1 className="text-title md:text-heading font-extrabold text-slate-800 mb-1 tracking-tight">
+              <h1 className="text-title md:text-heading font-bold text-primary-text mb-1 tracking-tight">
                 Rekomendasi Karir AI
               </h1>
-              <p className="text-caption font-semibold text-slate-500">
+              <p className="text-body-sm font-medium text-secondary-text">
                 Pekerjaan paling sesuai berdasarkan kecocokan CV, skill gap, dan profil Anda.
               </p>
             </div>

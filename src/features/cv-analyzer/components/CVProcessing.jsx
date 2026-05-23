@@ -1,24 +1,20 @@
 import React from 'react';
-import { Loader2, CheckCircle2, Circle } from 'lucide-react';
+import { CheckCircle2, Circle, Loader2 } from 'lucide-react';
+import LoadingSpinner from '../../../components/ui/LoadingSpinner';
 
 const CVProcessing = ({ currentStep, steps, fileName }) => {
   return (
     <div className="w-full bg-white rounded-[32px] border border-border p-8 md:p-12 shadow-sm flex flex-col items-center justify-center">
       {/* Animated Spinner Icon */}
-      <div className="relative flex items-center justify-center w-24 h-24 mb-8">
-        {/* Outer Pulsing Glow */}
-        <div className="absolute inset-0 rounded-full bg-primary/10 animate-ping opacity-60"></div>
-        {/* Inner solid circular box */}
-        <div className="w-20 h-20 rounded-full bg-white border border-border/80 flex items-center justify-center shadow-md relative z-10">
-          <Loader2 className="w-10 h-10 text-primary animate-spin" />
-        </div>
+      <div className="mb-8">
+        <LoadingSpinner size="lg" label="" />
       </div>
 
       {/* Headline */}
       <h3 className="text-xl md:text-2xl font-bold text-primary-text mb-2 text-center">
         Sedang Menganalisis CV Anda
       </h3>
-      <p className="text-sm font-semibold text-secondary-text mb-10 text-center max-w-md">
+      <p className="text-body-sm font-medium text-secondary-text mb-10 text-center max-w-md">
         Berkas: <span className="text-primary font-bold">{fileName}</span>. AI kami sedang mengekstrak dan mengevaluasi isi CV Anda.
       </p>
 
