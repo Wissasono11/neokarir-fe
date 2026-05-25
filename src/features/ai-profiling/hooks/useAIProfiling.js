@@ -7,7 +7,7 @@ export const useAIProfiling = () => {
   const { user } = useAuth();
   const [isProcessing, setIsProcessing] = useState(true);
   const [progress, setProgress] = useState(0);
-  const [processingStatus, setProcessingStatus] = useState('Reading data profile...');
+  const [processingStatus, setProcessingStatus] = useState('Membaca data profile...');
 
   const { recommendations, overallReadiness } = useCareerRecommendations();
   const { radarData, learningPath, heroData } = useSkillGap();
@@ -20,9 +20,9 @@ export const useAIProfiling = () => {
       currentProgress += 2;
       setProgress(currentProgress);
       
-      if (currentProgress === 30) setProcessingStatus('Analyzing your skills & experience...');
-      if (currentProgress === 60) setProcessingStatus('Mapping to industry standards...');
-      if (currentProgress === 85) setProcessingStatus('Generating personalized recommendations...');
+      if (currentProgress === 30) setProcessingStatus('Analisis skill dan pengalaman Anda...');
+      if (currentProgress === 60) setProcessingStatus('Pemetaan ke standar industri...');
+      if (currentProgress === 85) setProcessingStatus('Pembuatan rekomendasi yang dipersonalisasi...');
       
       if (currentProgress >= 100) {
         clearInterval(interval);

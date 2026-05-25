@@ -22,7 +22,7 @@ const OnboardingLayout = ({ currentStep, totalSteps = 3, children }) => {
             </span>
           </div>
           <div className="text-sm font-medium text-secondary-text">
-            Step {currentStep} of {totalSteps}
+            Langkah {currentStep} dari {totalSteps}
           </div>
         </div>
       </motion.nav>

@@ -31,10 +31,10 @@ const CVUploadZone = ({ cvFile, setCvFile }) => {
           </div>
           
           <h3 className="text-title font-bold text-primary-text mb-2">
-            Drag & Drop your CV here
+            Drag & Drop CV Anda di sini
           </h3>
           <p className="text-secondary-text mb-8">
-            Supported formats: PDF, DOCX (Max 5MB)
+            Format yang didukung: PDF, DOCX (Max 5MB)
           </p>
           
           <Button 
@@ -42,7 +42,7 @@ const CVUploadZone = ({ cvFile, setCvFile }) => {
             className="rounded-full px-8 py-2.5 font-medium border-border"
             onClick={() => fileInputRef.current?.click()}
           >
-            Choose File
+            Pilih File
           </Button>
           <input
             type="file"

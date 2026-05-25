@@ -17,9 +17,9 @@ export const useStepSummary = (addSkill) => {
 
   const getGoalText = (goal) => {
     switch(goal) {
-      case 'first-job': return 'Finding First Job';
-      case 'career-switch': return 'Career Switch';
-      case 'upskill': return 'Upskilling';
+      case 'first-job': return 'Cari Pekerjaan Pertama';
+      case 'career-switch': return 'Pindah Karier';
+      case 'upskill': return 'Meningkatkan Skill';
       default: return goal;
     }
   };

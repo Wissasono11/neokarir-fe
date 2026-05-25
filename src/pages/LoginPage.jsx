@@ -5,8 +5,8 @@ import LoginForm from '../features/auth/components/LoginForm';
 const LoginPage = () => {
   return (
     <AuthLayout 
-      title="Welcome back" 
-      subtitle="Sign in to your account to continue your career journey"
+      title="Selamat Datang Kembali"
+      subtitle="Masuk ke akun Anda untuk melanjutkan perjalanan karier"
     >
       <LoginForm />
     </AuthLayout>

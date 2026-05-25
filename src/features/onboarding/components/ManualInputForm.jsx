@@ -22,7 +22,7 @@ const ManualInputForm = ({ manualData, updateManualData }) => {
     <div className="w-full bg-white rounded-2xl border border-border shadow-sm p-8 space-y-8">
       {/* 1. Domain */}
       <div>
-        <h3 className="text-body font-bold text-primary-text mb-4">1. What IT domain do you want to focus on?</h3>
+        <h3 className="text-body font-bold text-primary-text mb-4">1. Apa ranah (domain) IT yang paling ingin kamu fokuskan?</h3>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
           {IT_DOMAINS.map(domain => (
             <button
@@ -49,7 +49,7 @@ const ManualInputForm = ({ manualData, updateManualData }) => {
       {/* 2. Role */}
       {manualData.domain && (
         <div>
-          <h3 className="text-body font-bold text-primary-text mb-4">2. Select a specific role you are targeting!</h3>
+          <h3 className="text-body font-bold text-primary-text mb-4">2. Pilih peran spesifik yang menjadi targetmu!</h3>
           <div className="flex flex-wrap gap-3">
             {availableRoles.map(role => (
               <button
@@ -74,7 +74,7 @@ const ManualInputForm = ({ manualData, updateManualData }) => {
       {/* 3. Tech Stack */}
       <div>
         <div className="flex justify-between items-center mb-4">
-          <h3 className="text-body font-bold text-primary-text">3. Select up to 10 Tech Stacks, Frameworks, or Tools you master.</h3>
+          <h3 className="text-body font-bold text-primary-text">3. Pilih maksimal 10 Tech Stacks, Frameworks, atau Tools yang kamu kuasai.</h3>
           <span className="text-xs font-semibold bg-bg-secondary text-secondary-text px-2 py-1 rounded-md">
             {manualData.techStack.length}/10
           </span>
@@ -128,7 +128,7 @@ const ManualInputForm = ({ manualData, updateManualData }) => {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         {/* 4. Experience */}
         <div>
-          <h3 className="text-body font-bold text-primary-text mb-4">4. How long is your work experience?</h3>
+          <h3 className="text-body font-bold text-primary-text mb-4">4. Berapa lama pengalaman kerjamu?</h3>
           <div className="space-y-3">
             {EXPERIENCE_LEVELS.map(level => (
               <label key={level} className="flex items-center gap-3 cursor-pointer group">
@@ -154,7 +154,7 @@ const ManualInputForm = ({ manualData, updateManualData }) => {
 
         {/* 5. Education */}
         <div>
-          <h3 className="text-body font-bold text-primary-text mb-4">5. What is your highest education level?</h3>
+          <h3 className="text-body font-bold text-primary-text mb-4">5. Apa jenjang pendidikan terakhirmu saat ini?</h3>
           <div className="space-y-3">
             {EDUCATION_LEVELS.map(level => (
               <label key={level} className="flex items-center gap-3 cursor-pointer group">

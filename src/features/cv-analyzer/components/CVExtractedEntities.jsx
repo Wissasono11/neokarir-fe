@@ -13,7 +13,7 @@ const CVExtractedEntities = ({ entities }) => {
         <h3 className="text-lg md:text-xl font-bold text-primary-text mb-1">
           Ekstraksi Informasi NER (Named Entity Recognition)
         </h3>
-        <p className="text-xs md:text-sm font-semibold text-secondary-text">
+        <p className="text-xs md:text-sm font-medium text-secondary-text">
           Sistem kecerdasan buatan kami berhasil memetakan teks CV Anda menjadi 13 tag sequence BIO berikut:
         </p>
       </div>

@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { Search, X, CheckCircle, FileText, Briefcase, GraduationCap, MapPin, Sparkles } from 'lucide-react';
+import { Search, X, CheckCircle, FileText, BriefcaseBusiness, GraduationCap, MapPin, Sparkles } from 'lucide-react';
 import { onboardingStepVariants } from '../../../utils/animations';
 import Button from '../../../components/ui/Button';
 import CVDataCard from './CVDataCard';
@@ -40,10 +40,10 @@ const StepSummary = ({
     >
       <div className="text-center mb-10">
         <h1 className="text-heading-lg md:text-heading-xl font-bold text-primary-text tracking-tight mb-4">
-          Review & Confirm Your Profile
+          Periksa & Konfirmasi Profil Anda
         </h1>
-        <p className="text-secondary-text text-lg max-w-2xl mx-auto">
-          Make sure all data is correct before our AI analyzes your career profile.
+        <p className="text-secondary-text text-lg max-w-3xl mx-auto">
+          Pastikan semua data sudah benar sebelum AI kami menganalisis profil karier Anda.
         </p>
       </div>
 
@@ -52,22 +52,22 @@ const StepSummary = ({
         <div className="md:col-span-7 space-y-6">
           <div className="bg-white rounded-2xl border border-border p-6 shadow-sm">
             <h3 className="text-lg font-bold text-primary-text mb-4 border-b border-border pb-4">
-              Profile Summary
+              Ringkasan Profil  
             </h3>
-            
+
             <div className="space-y-4">
               <div className="flex items-start gap-3">
-                <div className="mt-0.5 text-primary"><Briefcase size={20} /></div>
+                <div className="mt-0.5 text-primary"><BriefcaseBusiness size={20} /></div>
                 <div>
-                  <p className="text-sm text-secondary-text font-medium">Career Goal</p>
+                  <p className="text-sm text-secondary-text font-medium">Tujuan Karier</p>
                   <p className="text-primary-text font-semibold">{getGoalText(careerGoal)}</p>
                 </div>
               </div>
-              
+
               <div className="flex items-start gap-3">
                 <div className="mt-0.5 text-primary"><FileText size={20} /></div>
                 <div>
-                  <p className="text-sm text-secondary-text font-medium">Data Source</p>
+                  <p className="text-sm text-secondary-text font-medium">Sumber Data</p>
                   <p className="text-primary-text font-semibold flex items-center gap-2">
                     {inputMethod === 'upload' ? 'CV Upload' : 'Manual Input'}
                     {inputMethod === 'upload' && cvFile && (
@@ -90,7 +90,7 @@ const StepSummary = ({
                       </p>
                     </div>
                   </div>
-                  
+
                   <div className="flex items-start gap-3">
                     <div className="mt-0.5 text-primary"><GraduationCap size={20} /></div>
                     <div>
@@ -111,19 +111,21 @@ const StepSummary = ({
 
           <div className="bg-white rounded-2xl border border-border p-6 shadow-sm">
             <div className="flex justify-between items-center mb-4">
-              <h3 className="text-lg font-bold text-primary-text">Refine Skills (Optional)</h3>
+              <h3 className="text-lg font-bold text-primary-text">
+                Tambahkan Skill (Opsional)
+              </h3>
             </div>
             <p className="text-sm text-secondary-text mb-4">
-              Add any soft skills or other hard skills that might not be detected from your data.
+              Tambahkan soft skill atau hard skill lain yang mungkin belum terdeteksi dari data Anda.
             </p>
-            
+
             <div className="relative mb-4">
               <div className="absolute left-4 top-1/2 -translate-y-1/2 text-secondary-text pointer-events-none">
                 <Search size={18} />
               </div>
               <input
                 type="text"
-                placeholder="Type skill and press Enter..."
+                placeholder="Ketik skill dan tekan Enter..."
                 value={skillInput}
                 onChange={(e) => setSkillInput(e.target.value)}
                 onKeyDown={handleSkillKeyDown}
@@ -165,15 +167,15 @@ const StepSummary = ({
             <div className="w-12 h-12 rounded-xl bg-white/20 backdrop-blur-sm flex items-center justify-center mb-6">
               <Sparkles className="text-white" size={24} />
             </div>
-            
-            <h3 className="text-xl font-bold mb-6">What you'll get from our AI:</h3>
-            
+
+            <h3 className="text-xl font-bold mb-6">Apa yang akan Anda dapatkan dari AI kami:</h3>
+
             <ul className="space-y-4 mb-8">
               {[
-                'Career recommendations based on profile',
-                'Personalized learning path',
-                'Skill gap analysis',
-                'Career development advice'
+                'Rekomendasi Karier berdasarkan profil',
+                'Rencana pembelajaran yang dipersonalisasi',
+                'Analisis kesenjangan keterampilan',
+                'Saran pengembangan karier'
               ].map((item, i) => (
                 <li key={i} className="flex items-start gap-3">
                   <CheckCircle className="text-white/80 shrink-0 mt-0.5" size={20} />
@@ -181,20 +183,20 @@ const StepSummary = ({
                 </li>
               ))}
             </ul>
-            
-            <Button 
+
+            <Button
               onClick={submitOnboarding}
               disabled={isSubmitting}
               className="w-full bg-white/10! hover:bg-white/20! backdrop-blur-lg border border-white/30 text-white! py-4 text-body shadow-xl transition-all cursor-pointer"
             >
-              {isSubmitting ? 'Analyzing...' : 'Analyze My Profile 🚀'}
+              {isSubmitting ? 'Menganalisis...' : 'Analisis Profil Saya 🚀'}
             </Button>
-            
-            <button 
+
+            <button
               onClick={prevStep}
               className="w-full mt-4 text-white/80 hover:text-white text-sm font-medium transition-colors"
             >
-              Wait, I want to change my data
+              Tunggu, saya ingin mengubah data
             </button>
           </div>
         </div>

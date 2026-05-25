@@ -14,7 +14,7 @@ const QuickLinks = () => {
 
   return (
     <div className="bg-white rounded-[32px] border border-border p-4 md:p-8 shadow-sm h-full flex flex-col">
-      <h3 className="text-body md:text-subtitle font-bold text-primary-text mb-5 md:mb-6">Quick Links</h3>
+      <h3 className="text-body md:text-subtitle font-bold text-primary-text mb-5 md:mb-6">Akses Cepat</h3>
       
       <div className="flex-1 grid grid-cols-1 lg:grid-cols-2 gap-3">
         {links.map((link) => {

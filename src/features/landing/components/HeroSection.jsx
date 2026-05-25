@@ -1,8 +1,9 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom';
 import Button from '../../../components/ui/Button';
 import { heroTextContainerVariants as textContainerVariants, heroTextItemVariants as textItemVariants, heroImageVariants as imageVariants } from '../../../utils/animations';
+import heroImg from '../../../assets/images/hero-section.webp';
 
 const HeroSection = () => {
   return (
@@ -19,19 +20,19 @@ const HeroSection = () => {
             variants={textItemVariants}
             className="text-5xl md:text-6xl font-extrabold text-primary-text leading-tight mb-6 tracking-tight"
           >
-            Your Future Career, <br />
-            <span className="text-primary">Woven by AI</span>
+            Masa Depan Karirmu<br/>
+            <span className="text-primary"> Ditenun oleh AI</span>
           </motion.h1>
           <motion.p
             variants={textItemVariants}
-            className="text-lg md:text-xl text-secondary-text mb-10 max-w-lg leading-relaxed"
+            className="text-lg md:text-xl text-secondary-text mb-10 max-w-lg leading-relaxed text-justify"
           >
-            Close your skill gap and reach your career targets faster. NeoKarir analyzes your profile, maps market trends, and creates instant data-driven personalized roadmaps.
+            Atasi kesenjangan skill Anda dan raih tujuan karier Anda lebih cepat. NeoKarir menganalisis profil Anda, memetakan tren pasar, dan menyusun peta jalan yang dipersonalisasi dan didasarkan pada data secara instan.
           </motion.p>
 
           <motion.div variants={textItemVariants} className="flex flex-col sm:flex-row items-start sm:items-center gap-6 mb-12">
             <Link to="/register" className="bg-primary text-white hover:bg-primary/90 text-lg px-8 py-4 shadow-sm hover:shadow-md transition-shadow font-semibold rounded-xl transition-all duration-300 spring-transition btn-tactile">
-              Get Started
+              Mulai Sekarang
             </Link>
           </motion.div>
 
@@ -43,7 +44,7 @@ const HeroSection = () => {
               <img className="w-10 h-10 rounded-full border-2 border-white object-cover shadow-sm" src="https://i.pravatar.cc/100?img=3" alt="User" loading="lazy" />
             </div>
             <p className="text-sm font-medium text-secondary-text">
-              <strong className="text-primary-text font-bold">1,100+</strong> have joined
+              <strong className="text-primary-text font-bold">1,100+</strong> telah bergabung
             </p>
           </motion.div>
         </motion.div>
@@ -60,10 +61,12 @@ const HeroSection = () => {
             className="relative rounded-4xl overflow-hidden aspect-4/3 shadow-[0_8px_30px_rgb(0,0,0,0.06)]"
           >
             <img
-              src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=1740&auto=format&fit=crop"
+              src={heroImg}
               alt="Professional team collaborating"
               className="w-full h-full object-cover"
               fetchpriority="high"
+              width="600"
+              height="450"
             />
           </div>
 

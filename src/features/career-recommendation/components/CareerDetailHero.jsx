@@ -1,4 +1,4 @@
-import { Briefcase, GraduationCap } from 'lucide-react';
+import { BriefcaseBusiness, GraduationCap } from 'lucide-react';
 
 const CareerDetailHero = ({ job }) => {
   if (!job) return null;
@@ -33,16 +33,16 @@ const CareerDetailHero = ({ job }) => {
       {/* Quick Specs requirements badges */}
       <div className="flex items-center gap-3 self-stretch md:self-auto pt-4 md:pt-0 border-t md:border-t-0 border-slate-100">
         <div className="flex-1 md:flex-initial flex items-center gap-2 bg-slate-50 border border-slate-100 px-4 py-2 rounded-xl text-slate-600">
-          <Briefcase className="w-4 h-4 text-slate-400 shrink-0" />
+          <BriefcaseBusiness className="w-4 h-4 text-slate-400 shrink-0" />
           <div>
-            <div className="text-slate-400 text-caption uppercase font-bold tracking-wider">Pengalaman</div>
+            <div className="text-slate-400 text-caption font-bold tracking-wider">Pengalaman</div>
             <div className="text-body-sm font-bold">{job.min_experience}</div>
           </div>
         </div>
         <div className="flex-1 md:flex-initial flex items-center gap-2 bg-slate-50 border border-slate-100 px-4 py-2 rounded-xl text-slate-600">
           <GraduationCap className="w-4 h-4 text-slate-400 shrink-0" />
           <div>
-            <div className="text-slate-400 text-caption uppercase font-bold tracking-wider">Pendidikan</div>
+            <div className="text-slate-400 text-caption font-bold tracking-wider">Pendidikan</div>
             <div className="text-body-sm font-bold">{job.min_education}</div>
           </div>
         </div>

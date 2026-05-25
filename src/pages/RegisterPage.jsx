@@ -5,8 +5,8 @@ import RegisterForm from '../features/auth/components/RegisterForm';
 const RegisterPage = () => {
   return (
     <AuthLayout 
-      title="Create your account" 
-      subtitle="Start your career journey with AI-powered guidance"
+      title="Buat Akun Anda"
+      subtitle="Mulai perjalanan karier Anda"
     >
       <RegisterForm />
     </AuthLayout>

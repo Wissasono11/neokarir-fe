@@ -1,5 +1,5 @@
 import { useParams, useNavigate } from 'react-router-dom';
-import { Award, Sparkles } from 'lucide-react';
+import { Award } from 'lucide-react';
 
 // Layout & UI
 import DashboardLayout from '../layouts/DashboardLayout';
@@ -31,7 +31,7 @@ const CareerRecommendationDetailPage = () => {
 
   const breadcrumbItems = [
     { label: 'Career Recommendation', path: '/dashboard/recommendations', icon: Award },
-    { label: job ? job.job_title : 'Detail', path: `/dashboard/recommendations/${id}`, icon: Sparkles }
+    { label: job ? job.job_title : 'Detail', path: `/dashboard/recommendations/${id}`}
   ];
 
   const handleBackClick = () => {

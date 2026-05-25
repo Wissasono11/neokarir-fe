@@ -1,4 +1,4 @@
-import { Award, Briefcase, GraduationCap, CheckCircle } from 'lucide-react';
+import { Award, BriefcaseBusiness, GraduationCap, CheckCircle } from 'lucide-react';
 
 const JobMatchScoreChart = ({ job }) => {
   if (!job) return null;
@@ -109,7 +109,7 @@ const JobMatchScoreChart = ({ job }) => {
           <div className="space-y-1">
             <div className="flex justify-between items-center text-caption font-bold">
               <span className="text-slate-600 flex items-center gap-1.5">
-                <Briefcase className="w-3.5 h-3.5 text-slate-500 shrink-0" />
+                <BriefcaseBusiness className="w-3.5 h-3.5 text-slate-500 shrink-0" />
                 Pengalaman Kerja
               </span>
               <span className="text-slate-700">{matchBreakdown.experience}%</span>

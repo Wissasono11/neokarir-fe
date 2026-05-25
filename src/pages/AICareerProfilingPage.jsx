@@ -2,7 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { BrainCircuit } from 'lucide-react';
 import { useAIProfiling } from '../features/ai-profiling/hooks/useAIProfiling';
-import { profilingLoadingVariants, staggerContainerVariants } from '../utils/animations';
+import { profilingLoadingVariants, staggerContainerVariants, profilingResultVariants } from '../utils/animations';
 import ProfilingHero from '../features/ai-profiling/components/ProfilingHero';
 import CareerMatchCard from '../features/ai-profiling/components/CareerMatchCard';
 import SkillGapAnalysis from '../features/ai-profiling/components/SkillGapAnalysis';
@@ -54,7 +54,7 @@ const AICareerProfilingPage = () => {
           </motion.div>
 
           <h2 className="text-2xl font-bold text-primary-text mb-3">{processingStatus}</h2>
-          <p className="text-secondary-text font-medium">Please wait while our AI models analyze your unique career profile.</p>
+          <p className="text-secondary-text font-medium">Mohon tunggu sebentar sementara model AI kami menganalisis profil karier Anda yang unik.</p>
         </motion.div>
       </div>
     );
@@ -84,14 +84,17 @@ const AICareerProfilingPage = () => {
 
             {/* Left Column: Matches */}
             <div className="lg:col-span-7 space-y-6">
-              <div>
-                <h3 className="text-xl font-bold text-primary-text mb-4">Top Career Matches</h3>
+              <motion.div
+                variants={profilingResultVariants}
+                className="bg-white rounded-2xl border border-border p-6 shadow-sm"
+              >
+                <h3 className="text-xl font-bold text-primary-text mb-6">Pilihan Karier Teratas</h3>
                 <div className="space-y-4">
                   {results.topCareers.map(career => (
                     <CareerMatchCard key={career.id} career={career} />
                   ))}
                 </div>
-              </div>
+              </motion.div>
 
               <LearningPathSection paths={results.learningPath} />
             </div>

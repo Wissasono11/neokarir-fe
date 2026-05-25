@@ -35,7 +35,7 @@ const SkillGapAnalysis = ({ data, overallScore }) => {
 
       <div className="mt-6 text-center">
         <div className="text-heading-lg font-bold text-primary-text">{overallScore}%</div>
-        <p className="text-body-sm font-medium text-secondary-text mt-1">Overall Match Score</p>
+        <p className="text-body-sm font-medium text-secondary-text mt-1">Keselurahan Match Score</p>
       </div>
     </motion.div>
   );

@@ -17,13 +17,13 @@ const ProfilingHero = ({ score }) => {
         <div className="flex-1 text-center md:text-left">
           <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/20 backdrop-blur-sm text-sm font-medium mb-6">
             <Feather size={16} className="text-ye" />
-            <span>Analysis Complete</span>
+            <span>Analisis Selesai</span>
           </div>
           <h1 className="text-3xl md:text-5xl font-bold mb-4 tracking-tight">
-            Your Career Profile is Ready! 
+            Profil Karier Anda Sudah Siap! 
           </h1>
           <p className="text-white/80 text-lg max-w-xl leading-relaxed">
-            We've mapped your skills and experience against industry standards. Here's a personalized blueprint to accelerate your career.
+            Kami telah memetakan keterampilan dan pengalaman Anda terhadap standar industri. Berikut adalah cetak biru yang dipersonalisasi untuk mempercepat karier Anda.
           </p>
         </div>
         

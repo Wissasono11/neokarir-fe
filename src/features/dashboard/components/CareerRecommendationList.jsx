@@ -6,9 +6,9 @@ const CareerRecommendationList = ({ recommendations }) => {
   return (
     <div className="bg-white rounded-3xl border border-border p-4 md:p-8 shadow-sm h-full flex flex-col">
       <div className="flex justify-between items-center mb-6">
-        <h3 className="text-body md:text-subtitle font-bold text-primary-text">Top Career Recommendation</h3>
+        <h3 className="text-body md:text-subtitle font-bold text-primary-text">Rekomendasi Karir Terbaik</h3>
         <button onClick={() => navigate('/dashboard/recommendations')} className="text-caption md:text-body-sm font-bold text-primary hover:text-primary/80 transition-colors shrink-0 cursor-pointer">
-          See All
+          Lihat Semua
         </button>
       </div>
 
