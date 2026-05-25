@@ -38,10 +38,10 @@ const StepDataCV = ({
     >
       <div className="text-center mb-10">
         <h1 className="text-heading-lg md:text-heading-xl font-bold text-primary-text tracking-tight mb-4">
-          Upload your CV for AI Analysis
+          Unggah CV Anda untuk dianalisis oleh AI
         </h1>
         <p className="text-secondary-text text-lg max-w-2xl mx-auto">
-          Let our AI read your experience to create an accurate profile.
+          Izinkan AI kami membaca pengalaman Anda untuk membuat profil yang akurat.
         </p>
       </div>
 
@@ -52,7 +52,7 @@ const StepDataCV = ({
             
             <div className="flex items-center w-full max-w-2xl my-8">
               <div className="flex-1 h-px bg-border"></div>
-              <span className="px-4 text-xs font-semibold text-secondary-text tracking-wider">OR</span>
+              <span className="px-4 text-xs font-semibold text-secondary-text tracking-wider">ATAU</span>
               <div className="flex-1 h-px bg-border"></div>
             </div>
             
@@ -60,7 +60,7 @@ const StepDataCV = ({
               onClick={() => setInputMethod('manual')}
               className="text-primary font-medium underline hover:text-primary/80 transition-colors"
             >
-              Or fill data manually
+              Isi data manual
             </button>
           </div>
         ) : (
@@ -75,7 +75,7 @@ const StepDataCV = ({
                 onClick={() => setInputMethod('upload')}
                 className="text-primary font-medium hover:text-primary/80 transition-colors"
               >
-                &larr; Back to Upload CV
+                &larr; Kembali ke Unggah CV
               </button>
             </div>
           </div>

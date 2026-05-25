@@ -3,9 +3,9 @@ import { motion } from 'framer-motion';
 
 const OnboardingStepIndicator = ({ currentStep }) => {
   const steps = [
-    { num: 1, label: 'Goal' },
+    { num: 1, label: 'Tujuan' },
     { num: 2, label: 'Input Data' },
-    { num: 3, label: 'Summary' },
+    { num: 3, label: 'Ringkasan' },
   ];
 
   return (

@@ -30,7 +30,7 @@ const LoginForm = () => {
     >
       <motion.div variants={authItemVariants}>
         <FormInput
-          label="Email address"
+          label="Alamat Email"
           id="email"
           type="email"
           placeholder="hello@example.com"
@@ -57,7 +57,7 @@ const LoginForm = () => {
       <motion.div variants={authItemVariants} className="flex items-center justify-between">
         <Checkbox
           id="remember"
-          label="Remember me"
+          label="Ingat saya"
           checked={remember}
           onChange={(e) => setRemember(e.target.checked)}
         />
@@ -65,7 +65,7 @@ const LoginForm = () => {
           to="/forgot-password" 
           className="text-xs font-medium text-primary hover:text-primary/80 transition-colors"
         >
-          Forgot password?
+          Lupa password?
         </Link>
       </motion.div>
 
@@ -76,17 +76,17 @@ const LoginForm = () => {
           className="w-full py-3.5 text-body"
           disabled={isSubmitting}
         >
-          {isSubmitting ? 'Signing in...' : 'Sign In'}
+          {isSubmitting ? 'Masuk...' : 'Masuk'}
         </Button>
       </motion.div>
 
       <motion.p variants={authItemVariants} className="text-center text-sm text-secondary-text mt-2">
-        Don&apos;t have an account?{' '}
+        Belum punya akun?{' '}
         <Link 
           to="/register" 
           className="font-semibold text-primary hover:text-primary/80 transition-colors"
         >
-          Sign up
+          Daftar
         </Link>
       </motion.p>
     </motion.form>

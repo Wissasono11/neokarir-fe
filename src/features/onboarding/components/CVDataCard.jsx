@@ -1,4 +1,4 @@
-import { User, Target, Briefcase, Code, Edit2, Check, X, Plus } from 'lucide-react';
+import { User, Target, BriefcaseBusiness, Code, Edit2, Save, X, Plus } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useCVDataCard } from '../hooks/useCVDataCard';
 
@@ -18,7 +18,7 @@ const CVDataCard = ({ cvData, updateCvData }) => {
   return (
     <div className="bg-white rounded-2xl border border-border p-6 shadow-sm overflow-hidden relative">
       <div className="flex justify-between items-center mb-6 border-b border-border pb-4">
-        <h3 className="text-lg font-bold text-primary-text">CV Result</h3>
+        <h3 className="text-lg font-bold text-primary-text">Hasil Ekstrasi CV</h3>
         <button
           onClick={handleToggleEdit}
           className={`flex items-center gap-2 px-3 py-1.5 rounded-lg text-sm font-medium transition-all ${
@@ -28,9 +28,9 @@ const CVDataCard = ({ cvData, updateCvData }) => {
           }`}
         >
           {isEditing ? (
-            <><X size={16} /> Cancel</>
+            <><X size={16} />Batal</>
           ) : (
-            <><Edit2 size={16} /> Edit Info</>
+            <><Edit2 size={16} />Edit Info</>
           )}
         </button>
       </div>
@@ -40,7 +40,7 @@ const CVDataCard = ({ cvData, updateCvData }) => {
         <div className="space-y-1.5">
           <div className="flex items-center gap-2 text-secondary-text">
             <User size={16} />
-            <span className="text-xs font-semibold uppercase tracking-wider">Full Name</span>
+            <span className="text-xs font-semibold tracking-wider">Nama Lengkap</span>
           </div>
           {isEditing ? (
             <input
@@ -59,7 +59,7 @@ const CVDataCard = ({ cvData, updateCvData }) => {
           <div className="space-y-1.5">
             <div className="flex items-center gap-2 text-secondary-text">
               <Target size={16} />
-              <span className="text-xs font-semibold uppercase tracking-wider">Target Domain</span>
+              <span className="text-xs font-semibold tracking-wider">Target Domain</span>
             </div>
             {isEditing ? (
               <input
@@ -74,8 +74,8 @@ const CVDataCard = ({ cvData, updateCvData }) => {
           </div>
           <div className="space-y-1.5">
             <div className="flex items-center gap-2 text-secondary-text">
-              <Briefcase size={16} />
-              <span className="text-xs font-semibold uppercase tracking-wider">Target Role</span>
+              <BriefcaseBusiness size={16} />
+              <span className="text-xs font-semibold tracking-wider">Target Role</span>
             </div>
             {isEditing ? (
               <input
@@ -94,7 +94,7 @@ const CVDataCard = ({ cvData, updateCvData }) => {
         <div className="space-y-3">
           <div className="flex items-center gap-2 text-secondary-text">
             <Code size={16} />
-            <span className="text-xs font-semibold uppercase tracking-wider">Detected Skills</span>
+            <span className="text-xs font-semibold tracking-wider">Skill Terdeteksi</span>
           </div>
           
           <div className="flex flex-wrap gap-2 pl-6">
@@ -156,8 +156,8 @@ const CVDataCard = ({ cvData, updateCvData }) => {
               onClick={handleSave}
               className="flex items-center gap-2 px-6 py-2.5 bg-primary text-white rounded-xl font-bold hover:bg-primary-hover shadow-lg shadow-primary/20 transition-all active:scale-95"
             >
-              <Check size={18} />
-              Save Changes
+              <Save size={18} />
+              Simpan Perubahan
             </button>
           </motion.div>
         )}

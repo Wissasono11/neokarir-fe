@@ -44,8 +44,8 @@ const OnboardingPage = () => {
                 transition={{ delay: 0.2 }}
                 className="text-center"
               >
-                <h3 className="text-2xl font-bold text-primary-text mb-2">Analyzing your CV...</h3>
-                <p className="text-secondary-text">Our Smart AI is reading your profile to give the best recommendations.</p>
+                <h3 className="text-2xl font-bold text-primary-text mb-2">Menganalisis CV Anda...</h3>
+                <p className="text-secondary-text">AI Cerdas kami sedang membaca profil Anda untuk memberikan rekomendasi terbaik.</p>
               </motion.div>
               
               {/* Progress bar simulation */}

@@ -8,22 +8,22 @@ const StepGoal = ({ careerGoal, setCareerGoal, nextStep }) => {
   const goals = [
     {
       id: 'first-job',
-      title: 'Finding First Job',
-      description: 'Fresh graduates or students preparing for a solid career start.',
+      title: 'Cari Pekerjaan Pertama',
+      description: 'Cocok untuk Mahasiswa tingkat akhir atau fresh graduate yang ingin membangun awal karir yang solid.',
       icon: GraduationCap,
       color: 'bg-purple-100 text-primary'
     },
     {
       id: 'career-switch',
-      title: 'Career Switch',
-      description: 'Professionals planning a transition to a new field or industry.',
+      title: 'Pindah Karir',
+      description: 'Cocok untuk profesional yang ingin pindah ke bidang atau industri yang baru.',
       icon: ArrowRightLeft,
       color: 'bg-blue-100 text-blue-600'
     },
     {
       id: 'upskill',
-      title: 'Upskilling',
-      description: 'Focus on promotion, salary increase, or deepening skills in your current role.',
+      title: 'Meningkatkan Skill',
+      description: 'Cocok untuk profesional yang ingin meningkatkan skill, mendapatkan promosi, atau meningkatkan gaji.',
       icon: TrendingUp,
       color: 'bg-green-100 text-green-600'
     }
@@ -40,10 +40,10 @@ const StepGoal = ({ careerGoal, setCareerGoal, nextStep }) => {
     >
       <div className="text-center mb-10">
         <h1 className="text-heading-lg md:text-heading-xl font-bold text-primary-text tracking-tight mb-4">
-          What is your main focus right now?
+          Apa tujuan karir kamu saat ini?
         </h1>
         <p className="text-secondary-text text-lg max-w-2xl mx-auto">
-          Help us tailor your AI Co-pilot to provide recommendations most relevant to your career journey.
+          Bantu kami menyesuaikan AI Co-pilot untuk memberikan rekomendasi yang paling relevan dengan perjalanan karir kamu.
         </p>
       </div>
 
@@ -94,7 +94,7 @@ const StepGoal = ({ careerGoal, setCareerGoal, nextStep }) => {
         disabled={!careerGoal}
         className="w-full md:w-auto min-w-[200px] py-3.5 text-body"
       >
-        Continue &rarr;
+        Lanjut &rarr;
       </Button>
     </motion.div>
   );

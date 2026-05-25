@@ -31,7 +31,7 @@ const RegisterForm = () => {
     >
       <motion.div variants={authItemVariants}>
         <FormInput
-          label="Full Name"
+          label="Nama Lengkap"
           id="fullName"
           type="text"
           placeholder="Franz Hermann"
@@ -45,7 +45,7 @@ const RegisterForm = () => {
 
       <motion.div variants={authItemVariants}>
         <FormInput
-          label="Email Address"
+          label="Alamat Email"
           id="email"
           type="email"
           placeholder="hello@example.com"
@@ -72,7 +72,7 @@ const RegisterForm = () => {
 
       <motion.div variants={authItemVariants}>
         <PasswordInput
-          label="Confirm Password"
+          label="Konfirmasi Password  "
           id="confirmPassword"
           placeholder="Repeat your password"
           value={form.confirmPassword}
@@ -92,11 +92,11 @@ const RegisterForm = () => {
           }}
           label={
             <span>
-              I agree to the{' '}
+              Saya setuju dengan{' '}
               <Link to="/terms" className="font-medium text-primary hover:text-primary/80 transition-colors underline">
-                Terms of Service
+                Ketentuan Layanan
               </Link>{' '}
-              and{' '}
+              dan{' '}
               <Link to="/privacy" className="font-medium text-primary hover:text-primary/80 transition-colors underline">
                 Privacy Policy
               </Link>
@@ -115,17 +115,17 @@ const RegisterForm = () => {
           className="w-full py-3.5 text-body"
           disabled={isSubmitting}
         >
-          {isSubmitting ? 'Creating account...' : 'Create Account'}
+          {isSubmitting ? 'Membuat akun...' : 'Buat Akun'}
         </Button>
       </motion.div>
 
       <motion.p variants={authItemVariants} className="text-center text-sm text-secondary-text mt-2">
-        Already have an account?{' '}
+        Sudah punya akun?{' '}
         <Link 
           to="/login" 
           className="font-semibold text-primary hover:text-primary/80 transition-colors"
         >
-          Sign in
+          Masuk
         </Link>
       </motion.p>
     </motion.form>
