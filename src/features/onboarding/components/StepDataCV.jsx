@@ -23,8 +23,7 @@ const StepDataCV = ({
     manualData.role && 
     manualData.techStack.length > 0 &&
     manualData.experience &&
-    manualData.education &&
-    manualData.location;
+    manualData.education;
 
   const isValid = isUploadValid || isManualValid;
 
@@ -38,7 +37,7 @@ const StepDataCV = ({
       className="flex flex-col items-center w-full"
     >
       <div className="text-center mb-10">
-        <h1 className="text-[32px] md:text-[40px] font-bold text-primary-text tracking-tight mb-4">
+        <h1 className="text-heading-lg md:text-heading-xl font-bold text-primary-text tracking-tight mb-4">
           Upload your CV for AI Analysis
         </h1>
         <p className="text-secondary-text text-lg max-w-2xl mx-auto">

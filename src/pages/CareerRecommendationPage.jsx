@@ -1,0 +1,112 @@
+import { useNavigate } from 'react-router-dom';
+import { Award, AlertCircle } from 'lucide-react';
+
+// Layout & UI
+import DashboardLayout from '../layouts/DashboardLayout';
+import Breadcrumb from '../components/ui/Breadcrumb';
+import LoadingSpinner from '../components/ui/LoadingSpinner';
+
+// Custom Hooks & Data
+import { useCareerRecommendations } from '../features/career-recommendation/hooks/useCareerRecommendations';
+
+// Subcomponents
+import RecommendationFilter from '../features/career-recommendation/components/RecommendationFilter';
+import CareerCard from '../features/career-recommendation/components/CareerCard';
+import RecommendationHeader from '../features/career-recommendation/components/RecommendationHeader';
+import AIAdvisorInsight from '../features/career-recommendation/components/AIAdvisorInsight';
+
+const CareerRecommendationPage = () => {
+  const navigate = useNavigate();
+  const {
+    isLoading,
+    recommendations,
+    searchQuery,
+    setSearchQuery,
+    selectedDomain,
+    setSelectedDomain,
+    selectedMatchFilter,
+    setSelectedMatchFilter,
+    domains,
+    overallReadiness,
+    user
+  } = useCareerRecommendations();
+
+  const breadcrumbItems = [
+    { label: 'Career Recommendation', path: '/dashboard/recommendations', icon: Award }
+  ];
+
+  const handleCardClick = (jobId) => {
+    navigate(`/dashboard/recommendations/${jobId}`);
+  };
+
+  return (
+    <DashboardLayout>
+      {/* Breadcrumbs */}
+      <div className="mb-6">
+        <Breadcrumb items={breadcrumbItems} />
+      </div>
+
+      {isLoading ? (
+        <div className="flex items-center justify-center h-96">
+          <LoadingSpinner size="lg" label="Menganalisis profil dan merumuskan rekomendasi karir..." />
+        </div>
+      ) : (
+        <div className="space-y-6">
+          
+          {/* Header and Stats */}
+          <RecommendationHeader overallReadiness={overallReadiness} />
+
+          {/* AI Advisor insight banner */}
+          <AIAdvisorInsight user={user} />
+
+          {/* Filters Bar */}
+          <RecommendationFilter
+            searchQuery={searchQuery}
+            setSearchQuery={setSearchQuery}
+            selectedDomain={selectedDomain}
+            setSelectedDomain={setSelectedDomain}
+            selectedMatchFilter={selectedMatchFilter}
+            setSelectedMatchFilter={setSelectedMatchFilter}
+            domains={domains}
+          />
+
+          {/* Main Content Layout Grid */}
+          {recommendations.length === 0 ? (
+            <div className="bg-white rounded-2xl border border-slate-100 p-12 text-center space-y-3">
+              <div className="w-12 h-12 rounded-full bg-slate-50 flex items-center justify-center mx-auto text-slate-400">
+                <AlertCircle className="w-6 h-6" />
+              </div>
+              <h3 className="text-body-sm font-bold text-slate-800">Tidak Ada Rekomendasi</h3>
+              <p className="text-caption text-slate-500 max-w-sm mx-auto">
+                Kami tidak menemukan karir yang sesuai dengan filter pencarian Anda. Silakan ubah filter.
+              </p>
+            </div>
+          ) : (
+            <div className="space-y-4">
+              <div className="flex justify-between items-center px-1 mb-1">
+                <span className="text-caption font-bold text-slate-400 uppercase tracking-wider">
+                  Menampilkan {recommendations.length} Rekomendasi Karir
+                </span>
+              </div>
+              
+              {/* Grid Layout of Career Cards (Responsive: 1 col on mobile, 2 cols on md, 3 cols on xl) */}
+              <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
+                {recommendations.map(job => (
+                  <CareerCard
+                    key={job.job_id}
+                    job={job}
+                    isActive={false}
+                    onClick={() => handleCardClick(job.job_id)}
+                  />
+                ))}
+              </div>
+            </div>
+          )}
+
+        </div>
+      )}
+    </DashboardLayout>
+  );
+};
+
+export default CareerRecommendationPage;

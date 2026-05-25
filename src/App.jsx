@@ -12,6 +12,12 @@ import PrivacyPolicyPage from './pages/PrivacyPolicyPage';
 import OnboardingPage from './pages/OnboardingPage';
 import AICareerProfilingPage from './pages/AICareerProfilingPage';
 import DashboardPage from './pages/DashboardPage';
+import CVAnalyzerPage from './pages/CVAnalyzerPage';
+import SkillGapPage from './pages/SkillGapPage';
+import CareerRecommendationPage from './pages/CareerRecommendationPage';
+import CareerRecommendationDetailPage from './pages/CareerRecommendationDetailPage';
+import AIAssistantPage from './pages/AIAssistantPage';
+import ProfileSettingsPage from './pages/ProfileSettingsPage';
 
 function App() {
   return (
@@ -25,15 +31,21 @@ function App() {
           <Route path="/terms" element={<TermsOfServicePage />} />
           <Route path="/privacy" element={<PrivacyPolicyPage />} />
 
-          {/* Debugging Routes - Unprotected for now */}
+          {/* Debugging Routes */}
           <Route path="/onboarding" element={<OnboardingPage />} />
           <Route path="/ai-career-profiling" element={<AICareerProfilingPage />} />
 
-          {/* Protected Routes - For authenticated users who completed onboarding */}
+          {/* Protected Routes */}
           <Route element={<ProtectedRoute />}>
             <Route path="/dashboard" element={<DashboardPage />} />
+            <Route path="/dashboard/cv-analyzer" element={<CVAnalyzerPage />} />
+            <Route path="/dashboard/skill-gap" element={<SkillGapPage />} />
+            <Route path="/dashboard/recommendations" element={<CareerRecommendationPage />} />
+            <Route path="/dashboard/recommendations/:id" element={<CareerRecommendationDetailPage />} />
+            <Route path="/dashboard/ai-assistant" element={<AIAssistantPage />} />
+            <Route path="/dashboard/settings" element={<ProfileSettingsPage />} />
           </Route>
-        </Routes>
+        </Routes> 
       </BrowserRouter>
     </AuthProvider>
   );

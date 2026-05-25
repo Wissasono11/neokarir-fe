@@ -27,15 +27,15 @@ const Navbar = () => {
 
         {/* Navigation Links (Desktop) */}
         <div className="hidden md:flex items-center space-x-8">
-          <a href="#home" className="text-[15px] font-medium text-primary-text hover:text-primary transition-colors">Home</a>
-          <a href="#works" className="text-[15px] font-medium text-primary-text hover:text-primary transition-colors">How It Works</a>
-          <a href="#features" className="text-[15px] font-medium text-primary-text hover:text-primary transition-colors">Features</a>
-          <a href="#testimonials" className="text-[15px] font-medium text-primary-text hover:text-primary transition-colors">Testimonials</a>
+          <a href="#home" className="text-body font-medium text-primary-text hover:text-primary transition-colors">Home</a>
+          <a href="#works" className="text-body font-medium text-primary-text hover:text-primary transition-colors">How It Works</a>
+          <a href="#features" className="text-body font-medium text-primary-text hover:text-primary transition-colors">Features</a>
+          <a href="#testimonials" className="text-body font-medium text-primary-text hover:text-primary transition-colors">Testimonials</a>
         </div>
 
         {/* Actions (Desktop) */}
         <div className="hidden md:flex items-center space-x-2">
-          <Link to="/register" className="text-[15px] py-2.5 px-5 rounded-[10px] font-medium text-primary-text hover:text-primary hover:bg-primary/10 transition-colors">Sign Up</Link>
+          <Link to="/register" className="text-body py-2.5 px-5 rounded-[10px] font-medium text-primary-text hover:text-primary hover:bg-primary/10 transition-colors">Sign Up</Link>
           <Link to="/login">
             <Button variant="primary" className="py-2.5 px-5">Login</Button>
           </Link>
@@ -82,10 +82,10 @@ const Navbar = () => {
             className="md:hidden overflow-hidden bg-white/95 backdrop-blur-md border-t border-gray-100 shadow-lg absolute top-full left-0 w-full"
           >
             <div className="px-6 py-4 flex flex-col space-y-2">
-              <a href="#home" onClick={closeMenu} className="text-[15px] font-medium text-primary-text hover:text-primary transition-colors py-2 block">Home</a>
-              <a href="#works" onClick={closeMenu} className="text-[15px] font-medium text-primary-text hover:text-primary transition-colors py-2 block">How It Works</a>
-              <a href="#features" onClick={closeMenu} className="text-[15px] font-medium text-primary-text hover:text-primary transition-colors py-2 block">Features</a>
-              <a href="#testimonials" onClick={closeMenu} className="text-[15px] font-medium text-primary-text hover:text-primary transition-colors py-2 block">Testimonials</a>
+              <a href="#home" onClick={closeMenu} className="text-body font-medium text-primary-text hover:text-primary transition-colors py-2 block">Home</a>
+              <a href="#works" onClick={closeMenu} className="text-body font-medium text-primary-text hover:text-primary transition-colors py-2 block">How It Works</a>
+              <a href="#features" onClick={closeMenu} className="text-body font-medium text-primary-text hover:text-primary transition-colors py-2 block">Features</a>
+              <a href="#testimonials" onClick={closeMenu} className="text-body font-medium text-primary-text hover:text-primary transition-colors py-2 block">Testimonials</a>
               <div className="flex flex-col space-y-3 pt-4 border-t border-gray-100 mt-2">
                 <Link to="/register" onClick={closeMenu} className="text-center py-2.5 px-5 rounded-[10px] font-medium text-primary-text hover:text-primary hover:bg-primary/10 transition-colors border border-gray-200">Sign Up</Link>
                 <Link to="/login" onClick={closeMenu} className="w-full">

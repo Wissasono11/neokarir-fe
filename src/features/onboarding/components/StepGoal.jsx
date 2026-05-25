@@ -39,7 +39,7 @@ const StepGoal = ({ careerGoal, setCareerGoal, nextStep }) => {
       className="flex flex-col items-center w-full"
     >
       <div className="text-center mb-10">
-        <h1 className="text-[32px] md:text-[40px] font-bold text-primary-text tracking-tight mb-4">
+        <h1 className="text-heading-lg md:text-heading-xl font-bold text-primary-text tracking-tight mb-4">
           What is your main focus right now?
         </h1>
         <p className="text-secondary-text text-lg max-w-2xl mx-auto">
@@ -92,7 +92,7 @@ const StepGoal = ({ careerGoal, setCareerGoal, nextStep }) => {
       <Button 
         onClick={nextStep} 
         disabled={!careerGoal}
-        className="w-full md:w-auto min-w-[200px] py-3.5 text-[15px]"
+        className="w-full md:w-auto min-w-[200px] py-3.5 text-body"
       >
         Continue &rarr;
       </Button>

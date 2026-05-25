@@ -73,7 +73,7 @@ const LoginForm = () => {
         <Button 
           type="submit" 
           variant="primary" 
-          className="w-full py-3.5 text-[15px]"
+          className="w-full py-3.5 text-body"
           disabled={isSubmitting}
         >
           {isSubmitting ? 'Signing in...' : 'Sign In'}
