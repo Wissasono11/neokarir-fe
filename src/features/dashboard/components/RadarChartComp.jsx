@@ -16,7 +16,7 @@ const RadarChartComp = ({ data, overallScore, showViewDetails = true }) => {
             onClick={() => navigate('/dashboard/skill-gap')}
             className="text-caption md:text-body-sm font-bold text-primary hover:text-primary/80 transition-colors cursor-pointer"
           >
-            View Details
+            Lihat Detail
           </button>
         )}
       </div>
@@ -45,7 +45,7 @@ const RadarChartComp = ({ data, overallScore, showViewDetails = true }) => {
 
       <div className="mt-1 text-center pb-1">
         <div className="text-body-lg md:text-title font-bold text-primary-text">{overallScore}%</div>
-        <p className="text-caption font-medium text-secondary-text mt-0.5">Overall Match Score</p>
+        <p className="text-caption font-medium text-secondary-text mt-0.5">Keselurahan Match Score</p>
       </div>
     </div>
   );

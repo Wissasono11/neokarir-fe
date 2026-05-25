@@ -22,7 +22,7 @@ const CVAnalysisResults = ({ results, onReset }) => {
           <h2 className="text-xl md:text-2xl font-bold text-primary-text mb-1">
             Hasil Analisis CV
           </h2>
-          <p className="text-xs md:text-sm font-semibold text-secondary-text">
+          <p className="text-xs md:text-sm font-medium text-secondary-text">
             Berikut adalah detail lengkap hasil analisis berkas CV Anda.
           </p>
         </div>

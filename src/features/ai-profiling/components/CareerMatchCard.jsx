@@ -6,7 +6,7 @@ const CareerMatchCard = ({ career }) => {
   return (
     <motion.div 
       variants={profilingResultVariants}
-      className="bg-white rounded-2xl border border-border p-6 shadow-sm hover:shadow-md hover:border-primary/40 transition-all cursor-pointer group"
+      className="p-4 rounded-xl border border-border hover:border-primary/30 hover:bg-bg-secondary/50 transition-all cursor-pointer group"
     >
       <div className="flex justify-between items-start mb-4">
         <div className="flex gap-4">

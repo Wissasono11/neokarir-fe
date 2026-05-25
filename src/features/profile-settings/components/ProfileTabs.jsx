@@ -2,10 +2,10 @@ import React from 'react';
 import { User, BriefcaseBusiness, ShieldCheck, Settings2 } from 'lucide-react';
 
 const TABS = [
-  { id: 'personal', label: 'Personal Info', icon: User },
-  { id: 'career', label: 'Career & Skills', icon: BriefcaseBusiness },
-  { id: 'security', label: 'Account Security', icon: ShieldCheck },
-  { id: 'preferences', label: 'Preferences', icon: Settings2 },
+  { id: 'personal', label: 'Informasi Pribadi', icon: User },
+  { id: 'career', label: 'Karier & Skills', icon: BriefcaseBusiness },
+  { id: 'security', label: 'Keamanan Akun', icon: ShieldCheck },
+  { id: 'preferences', label: 'Preferensi', icon: Settings2 },
 ];
 
 const ProfileTabs = ({ activeTab, onTabChange }) => {

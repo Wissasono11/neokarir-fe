@@ -24,7 +24,7 @@ const DashboardPage = () => {
     <DashboardLayout>
       <div className="mb-6 md:mb-8">
         <h2 className="text-title md:text-heading font-bold text-primary-text mb-1">
-          Good Morning {user?.name?.split(' ')[0] || 'Franz'}!
+          Selamat Pagi {user?.name?.split(' ')[0] || 'Franz'}!
         </h2>
         <p className="text-body-sm md:text-body font-medium text-secondary-text">
           Berikut adalah progres karir dan kesiapan industri kamu hari ini.
@@ -58,7 +58,7 @@ const DashboardPage = () => {
         }} />
       </div>
 
-      <h3 className="text-body-lg md:text-title font-bold text-primary-text mb-6">Summary For You</h3>
+      <h3 className="text-body-lg md:text-title font-bold text-primary-text mb-6">Ringkasan Untuk Kamu</h3>
 
       {/* Middle Grid */}
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-4 md:gap-6 mb-6">

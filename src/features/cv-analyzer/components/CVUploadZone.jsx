@@ -44,16 +44,16 @@ const CVUploadZone = ({ onFileSelected, error }) => {
 
         {/* Prompt */}
         <h3 className="text-lg md:text-xl font-bold text-primary-text mb-2">
-          Drag & Drop Your CV Here
+          Drag & Drop CV Anda Disini
         </h3>
         <p className="text-sm md:text-body font-medium text-secondary-text mb-6">
-          or <span className="text-primary hover:underline font-bold">click to browse files</span>
+          Atau <span className="text-primary hover:underline font-bold">klik untuk browse file</span>
         </p>
 
         {/* Allowed Specs */}
         <div className="flex items-center gap-2 text-xs font-semibold text-secondary-text bg-bg-secondary/40 px-4 py-2 rounded-full border border-border/40">
           <FileText className="w-3.5 h-3.5" />
-          <span>Supported formats: PDF, DOC, DOCX (Max 5MB)</span>
+          <span>Format yang didukung: PDF, DOC, DOCX (Max 5MB)</span>
         </div>
       </div>
 

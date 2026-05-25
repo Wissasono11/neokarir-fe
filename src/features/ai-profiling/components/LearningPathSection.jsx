@@ -9,7 +9,7 @@ const LearningPathSection = ({ paths }) => {
       variants={profilingResultVariants}
       className="bg-white rounded-2xl border border-border p-6 shadow-sm"
     >
-      <h3 className="text-xl font-bold text-primary-text mb-6">Recommended Learning Path</h3>
+      <h3 className="text-xl font-bold text-primary-text mb-6">Rekomendasi Learning Path</h3>
       
       <div className="space-y-4">
         {paths.map((path, idx) => (
@@ -35,10 +35,6 @@ const LearningPathSection = ({ paths }) => {
                   <span className="flex items-center gap-1.5"><Clock size={13} /> {path.duration}</span>
                 </div>
               </div>
-            </div>
-            
-            <div className="hidden md:flex items-center text-primary font-medium opacity-0 group-hover:opacity-100 transition-opacity -translate-x-2 group-hover:translate-x-0">
-              Start Learning <ChevronRight size={18} className="ml-1" />
             </div>
           </div>
         ))}

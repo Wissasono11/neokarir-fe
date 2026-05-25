@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Target, ArrowRight } from 'lucide-react';
+import { BookOpen, ArrowRight } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 
 const DetailedProgressCard = ({ progressData }) => {
@@ -30,9 +30,9 @@ const DetailedProgressCard = ({ progressData }) => {
         {/* Header */}
         <div className="flex items-center gap-3 mb-5">
           <div className="w-12 h-12 rounded-2xl bg-amber-50 flex items-center justify-center">
-            <Target size={24} className="text-amber-500" />
+            <BookOpen size={24} className="text-amber-500" />
           </div>
-          <h3 className="font-bold text-primary-text text-subtitle">Career Readiness</h3>
+          <h3 className="font-bold text-primary-text text-subtitle">Roadmap Belajar</h3>
         </div>
 
         {/* Overall Score */}
@@ -45,7 +45,7 @@ const DetailedProgressCard = ({ progressData }) => {
           >
             {roadmap.value}%
           </motion.span>
-          <span className="text-caption font-semibold text-secondary-text pb-1">Roadmap Progress</span>
+          <span className="text-caption font-semibold text-secondary-text pb-1">Progres Pembelajaran</span>
         </div>
 
         {/* Progress Bar */}

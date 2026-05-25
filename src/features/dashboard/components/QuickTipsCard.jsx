@@ -1,36 +1,9 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import { Lightbulb, BookOpen, TrendingUp, CheckCircle2, ChevronRight } from 'lucide-react';
+import { Lightbulb, ChevronRight } from 'lucide-react';
 
 const QuickTipsCard = ({ tips }) => {
   const navigate = useNavigate();
-  const defaultTips = [
-    {
-      id: 1,
-      icon: BookOpen,
-      text: 'Pelajari Docker untuk pemula agar bisa menguasai core containerization',
-      action: 'Mulai Belajar',
-      category: 'skill',
-      completed: false,
-    },
-    {
-      id: 2,
-      icon: TrendingUp,
-      text: 'Pelajari Golang untuk backend services guna menutupi gap kritis',
-      action: 'Lihat Roadmap',
-      category: 'roadmap',
-      completed: false,
-    },
-    {
-      id: 3,
-      icon: CheckCircle2,
-      text: 'Gunakan template CV profesional yang telah terbukti lolos ATS',
-      action: 'Lihat Tips CV',
-      category: 'action',
-      completed: true,
-    },
-  ];
-
   const activeTips = tips || defaultTips;
 
   return (
@@ -44,7 +17,7 @@ const QuickTipsCard = ({ tips }) => {
           <div className="w-9 h-9 rounded-xl bg-white/20 backdrop-blur-sm flex items-center justify-center">
             <Lightbulb size={18} className="text-white" />
           </div>
-          <h3 className="text-body-lg font-bold text-white">Quick Tips & Action Steps</h3>
+          <h3 className="text-body md:text-subtitle font-bold text-white">Tips Cepat & Aksi Selanjutnya</h3>
         </div>
         
         <div className="flex flex-col gap-3 relative z-10">

@@ -41,7 +41,7 @@ const DashboardNavbar = ({ onMenuClick }) => {
               aria-haspopup="true"
             >
               <div className="text-right hidden sm:block">
-                <p className="text-body-sm font-medium text-secondary-text leading-tight">Hello👋</p>
+                <p className="text-body-sm font-medium text-secondary-text leading-tight">Halo!👋</p>
                 <p className="text-body-sm font-bold text-primary-text leading-tight mt-0.5 group-hover:text-primary transition-colors">
                   {user?.name || 'Franz Hermann'}
                 </p>
@@ -105,7 +105,7 @@ const DashboardNavbar = ({ onMenuClick }) => {
                     role="menuitem"
                   >
                     <LogOut size={16} />
-                    Logout
+                    Keluar
                   </button>
                 </div>
               </div>
