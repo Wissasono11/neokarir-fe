@@ -33,7 +33,7 @@ const LoginForm = () => {
           label="Alamat Email"
           id="email"
           type="email"
-          placeholder="hello@example.com"
+          placeholder="halo@example.com"
           icon={Mail}
           value={form.email}
           onChange={handleChange}

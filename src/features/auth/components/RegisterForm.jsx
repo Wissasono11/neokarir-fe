@@ -48,7 +48,7 @@ const RegisterForm = () => {
           label="Alamat Email"
           id="email"
           type="email"
-          placeholder="hello@example.com"
+          placeholder="halo@example.com"
           icon={Mail}
           value={form.email}
           onChange={handleChange}
@@ -61,7 +61,7 @@ const RegisterForm = () => {
         <PasswordInput
           label="Password"
           id="password"
-          placeholder="Create a strong password"
+          placeholder="Buat password yang kuat"
           value={form.password}
           onChange={handleChange}
           error={errors.password}
@@ -74,7 +74,7 @@ const RegisterForm = () => {
         <PasswordInput
           label="Konfirmasi Password  "
           id="confirmPassword"
-          placeholder="Repeat your password"
+          placeholder="Ulangi password"
           value={form.confirmPassword}
           onChange={handleChange}
           error={errors.confirmPassword}

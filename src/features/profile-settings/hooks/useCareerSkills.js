@@ -1,10 +1,13 @@
 import { useState, useCallback } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { useAuth } from '../../../contexts/AuthContext';
 
 export const useCareerSkills = (initialUser) => {
   const navigate = useNavigate();
+  const { resetOnboarding } = useAuth();
   const [newSkill, setNewSkill] = useState('');
   const [isReprocessing, setIsReprocessing] = useState(false);
+  const [isModalOpen, setIsModalOpen] = useState(false);
   const [careerInfo, setCareerInfo] = useState({
     currentRole: initialUser?.role || 'Full Stack Developer',
     targetRole: 'Senior Full Stack Developer',
@@ -44,8 +47,13 @@ export const useCareerSkills = (initialUser) => {
     setIsReprocessing(true);
     await new Promise(resolve => setTimeout(resolve, 1500));
     setIsReprocessing(false);
+    setIsModalOpen(false);
+    resetOnboarding();
     navigate('/onboarding');
-  }, [navigate]);
+  }, [navigate, resetOnboarding]);
+
+  const openModal = () => setIsModalOpen(true);
+  const closeModal = () => setIsModalOpen(false);
 
   return {
     careerInfo,
@@ -55,6 +63,9 @@ export const useCareerSkills = (initialUser) => {
     newSkill,
     setNewSkill,
     isReprocessing,
-    handleReprocess
+    handleReprocess,
+    isModalOpen,
+    openModal,
+    closeModal
   };
 };

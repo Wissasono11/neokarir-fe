@@ -86,6 +86,11 @@ export const AuthProvider = ({ children }) => {
     }
   };
 
+  const resetOnboarding = () => {
+    setIsNewUser(true);
+    localStorage.removeItem('neokarir_onboarding_completed');
+  };
+
   const logout = () => {
     setIsAuthenticated(false);
     setIsNewUser(false);
@@ -103,7 +108,8 @@ export const AuthProvider = ({ children }) => {
     login,
     register,
     logout,
-    completeOnboarding
+    completeOnboarding,
+    resetOnboarding
   };
 
   return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>;

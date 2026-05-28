@@ -24,6 +24,9 @@ const ProfileSettingsPage = () => {
     setNewSkill,
     isReprocessing,
     handleReprocess,
+    isModalOpen,
+    openModal,
+    closeModal,
     security,
     updateSecurity,
     removeSession,
@@ -62,6 +65,9 @@ const ProfileSettingsPage = () => {
             setNewSkill={setNewSkill}
             isReprocessing={isReprocessing}
             handleReprocess={handleReprocess}
+            isModalOpen={isModalOpen}
+            openModal={openModal}
+            closeModal={closeModal}
           />
         );
       case 'security':

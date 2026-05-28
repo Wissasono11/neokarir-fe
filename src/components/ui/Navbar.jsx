@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X } from 'lucide-react';
-import Button from '../ui/Button';
+import Button from './Button';
 import { navbarVariants } from '../../utils/animations';
 import { useScrollDetection } from '../../hooks/useScrollDetection';
 import { useMobileMenu } from '../../hooks/useMobileMenu';

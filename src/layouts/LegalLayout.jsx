@@ -1,7 +1,7 @@
 import React from 'react';
 import { useScrollToTop } from '../hooks/useScrollToTop';
-import Navbar from '../components/navigation/Navbar';
-import Footer from '../components/navigation/Footer';
+import Navbar from '../components/ui/Navbar';
+import Footer from '../components/ui/Footer';
 
 const LegalLayout = ({ title, lastUpdated, children }) => {
   useScrollToTop();
