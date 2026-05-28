@@ -13,7 +13,7 @@ Berikut adalah beberapa fitur utama yang telah dikembangkan di platform NeoKarir
    * Dilengkapi halaman Syarat Ketentuan (*Terms of Service*) dan Kebijakan Privasi (*Privacy Policy*).
 
 2. **🔐 Sistem Autentikasi**
-   * Registrasi (*Register*) dan Masuk (*Login*) pengguna yang aman.
+   * Registrasi (*Register*), Masuk (*Login*), serta pemulihan akun melalui Lupa Password (*Forgot Password*).
    * Manajemen sesi login terintegrasi melalui *Auth Context*.
 
 3. **🎯 Onboarding & AI Career Profiling**
@@ -31,7 +31,7 @@ Berikut adalah beberapa fitur utama yang telah dikembangkan di platform NeoKarir
 
 7. **💼 Rekomendasi Karir & Detail Karir**
    * Daftar rekomendasi jalur karir yang dipersonalisasi sesuai profil AI pengguna.
-   * Halaman detail karir yang mengulas deskripsi peran, rentang gaji perkiraan, serta tren industri.
+   * Halaman detail karir yang difokuskan pada strategi terukur untuk mengurangi kesenjangan kemampuan (*skill gap*) pengguna, memastikan keahlian tetap relevan dan selaras dengan standar kualifikasi industri saat ini.
 
 8. **🤖 AI Assistant Chatbot**
    * Asisten/konsultan karir pribadi berbasis AI dalam bentuk chat interaktif untuk membantu menjawab pertanyaan seputar persiapan kerja, pembuatan portofolio, simulasi wawancara, dan lainnya.
@@ -40,7 +40,7 @@ Berikut adalah beberapa fitur utama yang telah dikembangkan di platform NeoKarir
    * Manajemen profil pengguna termasuk pembaruan data diri dan preferensi karir.
 
 10. **📈 Job Market (Pasar Kerja)**
-    * Halaman yang menampilkan perbandingan tren pasar kerja antar domain, tren pertumbuhan jabatan, tingkat gaji rata-rata, dan prediksi tren di masa depan.
+    * Halaman yang menampilkan perbandingan tren pasar kerja antar domain, tren pertumbuhan jabatan, dan prediksi tren di masa depan.
 ---
 
 ## 📁 Struktur Folder
@@ -57,6 +57,7 @@ neokarir-fe/
 │   ├── hooks/       # Custom hooks (React hooks)
 │   ├── layouts/     # Layout halaman (seperti header, sidebar, footer)
 │   ├── pages/       # Komponen halaman utama yang terkait dengan rute
+│   ├── routes/      # Konfigurasi routing dan guards aplikasi
 │   ├── utils/       # Fungsi utilitas/helper
 │   ├── App.jsx      # Root komponen aplikasi
 │   └── index.jsx    # Entry point aplikasi

@@ -1,5 +1,6 @@
 import React from 'react';
-import { X, Plus, BrainCog, Loader2 } from 'lucide-react';
+import { X, Plus, BrainCog, Loader2, AlertTriangle } from 'lucide-react';
+import { motion, AnimatePresence } from 'framer-motion';
 import Card from '../../../components/ui/Card';
 import FormInput from '../../../components/ui/FormInput';
 import Button from '../../../components/ui/Button';
@@ -13,7 +14,10 @@ const CareerSkillsTab = ({
   newSkill,
   setNewSkill,
   isReprocessing,
-  handleReprocess
+  handleReprocess,
+  isModalOpen,
+  openModal,
+  closeModal
 }) => {
   const handleAddSkill = () => {
     if (newSkill.trim()) {
@@ -167,7 +171,7 @@ const CareerSkillsTab = ({
           </div>
           <Button
             variant="primary"
-            onClick={handleReprocess}
+            onClick={openModal}
             disabled={isReprocessing}
             className="shrink-0"
           >
@@ -179,12 +183,73 @@ const CareerSkillsTab = ({
             ) : (
               <>
                 <BrainCog size={16} className="mr-2" />
-                Reprocess with AI
+                Proses Ulang dengan AI
               </>
             )}
           </Button>
         </div>
       </Card>
+
+      {/* Confirmation Modal */}
+      <AnimatePresence>
+        {isModalOpen && (
+          <div className="fixed inset-0 z-50 flex items-center justify-center px-4">
+            {/* Backdrop */}
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              onClick={closeModal}
+              className="absolute inset-0 bg-black/40 backdrop-blur-[2px]"
+            />
+            
+            {/* Modal Content */}
+            <motion.div
+              initial={{ opacity: 0, scale: 0.95, y: 20 }}
+              animate={{ opacity: 1, scale: 1, y: 0 }}
+              exit={{ opacity: 0, scale: 0.95, y: 20 }}
+              className="relative w-full max-w-md bg-white rounded-2xl shadow-xl overflow-hidden p-6"
+            >
+              <div className="flex flex-col items-center text-center">
+                <div className="w-12 h-12 bg-amber-100 text-amber-600 rounded-full flex items-center justify-center mb-4">
+                  <AlertTriangle size={24} />
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-2">
+                  Proses Ulang dari Awal?
+                </h3>
+                <p className="text-sm text-gray-500 mb-6">
+                  Anda akan diarahkan kembali ke halaman Onboarding. Profil dan data saat ini akan disesuaikan kembali berdasarkan input terbaru Anda. Apakah Anda yakin?
+                </p>
+                <div className="flex gap-3 w-full">
+                  <Button
+                    variant="secondary"
+                    onClick={closeModal}
+                    className="flex-1 justify-center"
+                    disabled={isReprocessing}
+                  >
+                    Batal
+                  </Button>
+                  <Button
+                    variant="primary"
+                    onClick={handleReprocess}
+                    disabled={isReprocessing}
+                    className="flex-1 justify-center bg-amber-600 hover:bg-amber-700 text-white border-transparent"
+                  >
+                    {isReprocessing ? (
+                      <>
+                        <Loader2 size={16} className="animate-spin mr-2" />
+                        Memproses...
+                      </>
+                    ) : (
+                      'Ya, Proses Ulang'
+                    )}
+                  </Button>
+                </div>
+              </div>
+            </motion.div>
+          </div>
+        )}
+      </AnimatePresence>
     </div>
   );
 };

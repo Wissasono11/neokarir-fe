@@ -20,7 +20,10 @@ export const useProfileSettings = () => {
     newSkill,
     setNewSkill,
     isReprocessing,
-    handleReprocess
+    handleReprocess,
+    isModalOpen,
+    openModal,
+    closeModal
   } = useCareerSkills(user);
   
   const { security, updateSecurity, removeSession } = useAccountSecurity();
@@ -40,6 +43,9 @@ export const useProfileSettings = () => {
     setNewSkill,
     isReprocessing,
     handleReprocess,
+    isModalOpen,
+    openModal,
+    closeModal,
     security,
     updateSecurity,
     removeSession,
